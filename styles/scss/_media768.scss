@@ -1,0 +1,211 @@
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    padding: 20px 15px;
+  }
+
+  /***************************   HEADER   ************************************/
+  .header {
+    > .navbar > .container {
+      padding: 0;
+    }
+    .glyphicon-align-justify {
+      display: inline-block;
+      float: right;
+      margin-top: 14px;
+      padding: 5px;
+      font-size: 15px;
+      color: $white-color;
+      cursor: pointer;
+      z-index: 1000;
+      -webkit-transition: 0.2s ease-out;
+      -moz-transition: 0.2s ease-out;
+      -o-transition: 0.2s ease-out;
+      transition: 0.2s ease-out;
+      @include border-radius(5px);
+      &:hover {
+        background: $dark-orange;
+      }
+    }
+    .sub-panel {
+      display: none;
+      position: absolute;
+      border-top: 1px solid #F28200;
+      right: 0;
+      top: 53px;
+      background: #ff8900;
+      border-radius: 0 0 8px 8px;
+      z-index: 5;
+    }
+    .header-tel {
+      font-size: 15px;
+    }
+    .work-time {
+      font-size: 12px;
+    }
+  }
+  .after-header .soc-list {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  .advantages {
+    li {
+      height: 35px;
+    }
+  }
+  .achievements {
+    text-align: center;
+  }
+  .header {
+    select.form-control {
+      width: 155px;
+      font-size: 10px;
+    }
+    .search-wrap {
+      width: 45%;
+      input.form-control {
+        width: 85%;
+      }
+      .submit {
+        width: 15%;
+      }
+    }
+  }
+  /***************************   END HEADER   ********************************/
+  /***************************   CONTENT      ********************************/
+  .content {
+    max-width: 515px;
+  }
+  .btn-group, .btn-group-vertical  {
+    .btn {
+      font-size: 10px;
+    }
+  }
+  .dropdown-menu {
+    top: 94px;
+    width: 99.9%;
+    .other-categories {
+      h3 {
+        margin-left: 0;
+      }
+      ul {
+        columns: 1;
+        -webkit-columns: 1;
+        -moz-columns: 1;
+        li {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  .pagination-section {
+    margin-right: 68px;
+    text-align: center;
+  }
+  .middle-content {
+    .top-list-item {
+      &:hover .item-wrap {
+        position: absolute;
+        overflow: hidden;
+        width: 420px;
+        left: -37px;
+        top: -1px;
+        z-index: 900;
+        border: 1px solid $orange-color;
+        @include box-shadow(rgba(255, 101, 2, 0.46) -2px -2px 5px, rgba(255, 101, 2, 0.46) 2px 2px 5px);
+        @include border-radius(5px);
+      }
+      &:hover .item-info-wrap{
+        float: left;
+        width: 188px;
+      }
+      &:hover .slider-wrap {
+        display: block;
+      }
+      &:hover .more-information, &:hover .right-block-info {
+        display: block;
+      }
+      &:hover .right-block-info {
+        float: none;
+        width: 100%;
+      }
+      &:nth-child(2n) {
+        &:hover .item-wrap {
+          width: 270px;
+          left: -71px;
+        }
+      }
+      &:nth-child(2n+1) {
+        &:hover .item-wrap {
+          width: 270px;
+          left: -71px;
+        }
+      }
+    }
+    .selected-categories {
+      max-width: 440px;
+    }
+    .sorting-block, .show-block {
+      margin-right: 68px;
+    }
+  }
+  .modal-log {
+    width: 452px;
+    margin-left: -227px;
+    margin-top: -236px;
+    .registration-block {
+      float: left;
+      padding: 37px 0 30px 50px;
+      width: 450px;
+      min-height: 236px;
+      background: #fff;
+    }
+  }
+  .recent-slider .img-wrap {
+    width: 213px;
+  }
+  /***************************  END CONTENT   ********************************/
+  /***************************     FOOTER     ********************************/
+  .footer  {
+    .left-box {
+      padding: 0 120px;
+      border-right: none;
+    }
+    .center-box {
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+  /***************************   END FOOTER     ******************************/
+
+
+  /*********************************************************************************************************************/
+  /********************************************  MAIN PAGE STYLES ******************************************************/
+  /*********************************************************************************************************************/
+
+  .main-slider {
+    .owl-item {
+      padding: 0;
+    }
+    .item {
+      h2 {
+        top: 30px;
+        margin-left: 320px;
+        font: 800 24px "Open Sans", sans-serif;
+        color: $white-color;
+        text-transform: uppercase;
+        span {
+          display: block;
+          margin-top: -8px;
+        }
+      }
+      .slider-button {
+        top: 100px;
+        margin-left: 320px;
+      }
+    }
+  }
+
+}

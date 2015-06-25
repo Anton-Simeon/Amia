@@ -1,0 +1,31 @@
+body {
+	overflow: hidden;
+}
+@import "compass";
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,700);
+@import "normalize";
+@import "variables";
+
+* {
+	@include box-sizing(border-box);
+}
+a,p, a:hover {
+	color: $white-color;
+	text-decoration: none;
+}
+ul {
+	list-style: none;
+}
+div,p,a,span,em,strong,img,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,td,tr,form,fieldset,label,select,checkbox,input,textarea {
+	padding:0;
+	margin:0;
+	line-height: 1em;
+}
+
+@import "global";
+@import "media320";
+@import "media768";
+@import "media992";
+@import "media1200";

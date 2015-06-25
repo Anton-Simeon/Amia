@@ -1,0 +1,94 @@
+@media (min-width: 1200px) {
+
+  .container {
+    padding: 0;
+    width: 1024px;
+  }
+  /***************************   HEADER   ************************************/
+  .header {
+    .glyphicon-align-justify {
+      display: none;
+    }
+    .sub-panel {
+      display: block;
+      line-height: 53px;
+      float: right;
+      position: relative;
+      &:before {
+        position: absolute;
+        content: '';
+        top: 40%;
+        left: 0;
+        width: 1px;
+        height: 10px;
+        background: $white-color;
+      }
+    }
+    .header-tel {
+      font-size: 17px;
+    }
+    .work-time {
+      font-size: 11px;
+    }
+  }
+
+  /***************************   END HEADER   ********************************/
+  /***************************   CONTENT      ********************************/
+  .btn-group, .btn-group-vertical  {
+    .btn {
+      font-size: 12px;
+    }
+  }
+  .dropdown-menu {
+    top: 94px;
+    width: 100%;
+    .other-categories {
+      h3 {
+        margin-left: 28px;
+      }
+      ul {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+        li {
+          margin-left: 28px;
+        }
+      }
+    }
+  }
+  .middle-content {
+    .top-list-item {
+      &:hover .item-wrap {
+        position: absolute;
+        overflow: hidden;
+        width: 270px;
+        left: -71px;
+        top: -1px;
+        z-index: 900;
+        border: 1px solid $orange-color;
+        @include box-shadow(rgba(255, 101, 2, 0.46) -2px -2px 5px, rgba(255, 101, 2, 0.46) 2px 2px 5px);
+        @include border-radius(5px);
+      }
+      &:hover .item-info-wrap{
+        float: left;
+        width: 188px;
+      }
+      &:hover .slider-wrap {
+        display: block;
+      }
+      &:hover .more-information, &:hover .right-block-info {
+        display: block;
+      }
+      &:nth-child(4n) {
+        &:hover .item-wrap{
+          left: -75px;
+        }
+      }
+    }
+  }
+  .selected-categories {
+    max-width: 540px;
+  }
+  /***************************  END CONTENT   ********************************/
+
+}
