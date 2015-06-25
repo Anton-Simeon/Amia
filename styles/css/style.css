@@ -675,6 +675,10 @@ a, button {
   border-bottom: none;
   text-shadow: none;
 }
+.header .main-nav li.active a{
+  text-shadow: none;
+}
+
 .header .sign-in {
   margin-left: 10px;
   padding-left: 25px;
@@ -4846,10 +4850,10 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   width: 100%;
   display: none;
 }
-.no-active-filter {
-  position: relative;
+.input-wrap [disabled] + label{
+  opacity: 0.2;
 }
-.no-active-filter:after {
+/*.no-active-filter:after {
   content: " ";
   display: block;
   position: absolute;
@@ -4858,7 +4862,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.8);
-}
+}*/
 @media (max-width: 1199px) {
   .header .after-header .soc-list {
     padding-top: 5px;
