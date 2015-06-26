@@ -35,6 +35,7 @@ jQuery(function ($) {
 
     $categoryTags.each(function(index, element) {
         $(element).find('>li').slice(0,4).addClass('visible-element');
+        
     });
 
     $categoryTags.each(function(index,element) {
@@ -630,6 +631,8 @@ jQuery(function ($) {
         itemsMobile: [479,1]
 
     });
+
     //endregion
+
 
 });
