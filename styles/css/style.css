@@ -3422,6 +3422,7 @@ a, button {
   text-transform: uppercase;
   background: #ff8900;
   color: #fff;
+  margin-top: -20px;
   font: 700 13px "Open Sans", sans-serif;
 }
 .top-selection .middle-block-selection .right-middle-block .request-button:hover {

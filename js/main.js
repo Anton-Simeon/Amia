@@ -35,7 +35,7 @@ jQuery(function ($) {
 
     $categoryTags.each(function(index, element) {
         $(element).find('>li').slice(0,4).addClass('visible-element');
-        
+
     });
 
     $categoryTags.each(function(index,element) {
@@ -633,6 +633,8 @@ jQuery(function ($) {
     });
 
     //endregion
+
+    $('.filter .input-wrap input').removeAttr('checked');
 
 
 });
