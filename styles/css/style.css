@@ -1202,7 +1202,7 @@ a, button {
 }
 .btn-group .btn .text-wrap, .btn-group-vertical .btn .text-wrap {
   display: block;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 .menu-wrapper .btn{
@@ -2355,8 +2355,6 @@ a, button {
 }
 .middle-content .item-wrap {
   position: relative;
-  min-height: 320px;
-  margin-bottom: 10px;
   text-align: center;
   background: #fff;
   z-index: 800;
@@ -2365,7 +2363,7 @@ a, button {
   box-shadow: rgba(0, 0, 0, 0.1) -1px -1px 5px, rgba(0, 0, 0, 0.1) 1px 1px 5px;
 }
 .middle-content .item-wrap .item-info-wrap > h3 {
-  height: 76px;
+  height: 58px;
   padding: 5px;
   margin: 0;
 }

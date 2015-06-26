@@ -635,6 +635,9 @@ jQuery(function ($) {
     //endregion
 
     $('.filter .input-wrap input').removeAttr('checked');
-
+    $('.btn-category').click(function(){
+        $(this).parent().toggleClass('open');
+        $('.content-menu').slideToggle(400);
+    });
 
 });
