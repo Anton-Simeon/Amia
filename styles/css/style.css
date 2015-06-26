@@ -664,7 +664,7 @@ a, button {
   line-height: 1;
   vertical-align: middle;
   height: 53px;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
 .header .main-nav li a:hover {
   padding: 15px 14px;
@@ -1205,7 +1205,7 @@ a, button {
   margin: 0 auto;
 }
 .menu-wrapper .btn{
-  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
 .menu-wrapper .btn:hover {
   text-shadow: none; 
@@ -1663,7 +1663,7 @@ a, button {
   background: #ff8900;
   position: relative;
   outline: none;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 1px rgba(0, 0, 0, 0.3);
 }
 .sidebar .categories-list > li > a:hover, .sidebar .categories-list > li > a.active{ 
   background-color: #fff;
@@ -4853,16 +4853,6 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 .input-wrap [disabled] + label{
   opacity: 0.2;
 }
-/*.no-active-filter:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.8);
-}*/
 @media (max-width: 1199px) {
   .header .after-header .soc-list {
     padding-top: 5px;
