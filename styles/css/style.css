@@ -1203,6 +1203,7 @@ a, button {
 .btn-group .btn .text-wrap, .btn-group-vertical .btn .text-wrap {
   display: block;
   width: 100%;
+  padding: 0 2px;
   margin: 0 auto;
 }
 .menu-wrapper .btn{
