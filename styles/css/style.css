@@ -766,7 +766,7 @@ a, button {
 }
 .header a.basket.active {
   color: #ff4400;
-  background: #fff url("../../images/basket.png") 3px 37% no-repeat;
+  background: #fff;
   -moz-border-radius: 5px 5px 0 0;
   -webkit-border-radius: 5px;
   border-radius: 5px 5px 0 0;
@@ -4969,10 +4969,29 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   }
 
 }
-/*.content a {
+.content-block a {
   color: #ff8900;
   text-decoration: underline;
 }
-.content a:hover {
+.content-block a:hover {
   color: #ff4400;
-}*/
+  text-decoration: none;
+}
+
+.content-block h1{
+  padding-left: 0;
+  font-weight: 700;
+}
+
+.content-block {
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid #ff8900;
+  padding: 20px 20px 30px 20px;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.content-block br + br {
+  display: block;
+  margin: 6px;
+}
