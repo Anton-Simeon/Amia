@@ -91,6 +91,7 @@ jQuery(function ($) {
       var liVar = $(element);
       $(element).find('>li').not('.view-link, .view-category-item').slice(0,5).addClass('visible-element');
        liVar.find('>li').slice(0,5).addClass('visible-element');
+       // liVar.children().children('.second-categories-list.active').parent().css('background','#f00');
        liVar.children().children('.second-categories-list.active').parent().parent().children(':not(.view-second-level)').css('display', 'list-item');
        liVar.children().children('.second-categories-list.active').parent().parent().children('.view-second-level').css('display', 'none');
     });

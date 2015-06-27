@@ -1234,6 +1234,14 @@ a, button {
   height: 30px;
   height: 100;
 }
+/* new-style */
+.menu-wrapper > ul > li {
+  width: 12.5%;
+}
+.menu-wrapper > ul > li:last-child {
+  display: none !important;
+}
+/* End new-style */
 .sprite:before {
   content: " ";
   display: block;
