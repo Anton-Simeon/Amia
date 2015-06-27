@@ -710,6 +710,9 @@ a, button {
   height: 20px;
   width: 18px;
 }
+.header .link-login:hover:before{
+  background-position: -594px -1px;
+}
 .header .sign-in:before {
   position: absolute;
   left: 0;
