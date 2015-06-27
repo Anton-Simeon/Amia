@@ -5040,6 +5040,19 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 .content-block .row + .row {
   margin-top: 20px;
 }
+.content-block ul {
+  list-style: outside none disc;
+  padding-left: 40px;
+  line-height: inherit;
+}
+.content-block ol {
+  list-style: outside none decimal;
+  padding-left: 40px;
+  line-height: inherit;
+}
+.content-block li {
+  line-height: inherit;
+}
 @media (max-width: 767px){
   .content-block .row {
     margin-left: -10px;
