@@ -692,7 +692,7 @@ a, button {
 .header .log-in {
   display: inline-block;
   margin-left: 10px;
-  padding-right: 25px;
+  padding-right: 10px;
   position: relative;
   max-width: 140px;
   word-wrap: break-word;
@@ -701,10 +701,11 @@ a, button {
   min-height: 21px;
   font-size: 10px;
 }
-.header .log-in:before {
-  position: absolute;
-  right: 0;
-  top: 6px;
+.header .link-login{
+  display: inline-block;
+  vertical-align: middle;
+}
+.header .link-login:before {
   background-position: -2px -130px;
   height: 20px;
   width: 18px;

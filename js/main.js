@@ -296,7 +296,8 @@ jQuery(function ($) {
         type: 'double',
         step: 1,
         prefix: "€",
-        grid: true
+        grid: true,
+  onFinish:function(){LoadCategoryProducts();}
     });
     //endregion
 
