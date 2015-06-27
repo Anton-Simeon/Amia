@@ -2421,11 +2421,18 @@ a, button {
 }
 .wrap-top-list-item {
   margin: 10px -6px;
+  font-size: 0;
 }
 .wrap-top-list-item:after {
   content: " ";
   display: table;
   clear: both;
+}
+.wrap-top-list-item > li {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+  font-size: 12px;
 }
 @media (min-width: 320px) and (max-width: 420px) {
 
@@ -4797,7 +4804,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 
   .middle-content .top-list-item:hover .item-info-wrap {
     float: left;
-    width: 189px;
+    width: 189.267px;
   }
 
 
@@ -4981,6 +4988,9 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 .content-block h1{
   padding-left: 0;
   font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  margin-bottom: 23px;
 }
 
 .content-block {
@@ -4989,9 +4999,77 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   padding: 20px 20px 30px 20px;
   font-size: 14px;
   line-height: 1.4;
+
+}
+.content-block div {
+  line-height: inherit;
 }
 
 .content-block br + br {
   display: block;
   margin: 6px;
+}
+.content-block + .top-selection h2 {
+  padding-top: 30px;
+}
+.content-block img {
+  display: block;
+  margin: auto;
+  max-width: 100%;
+}
+.content-block h2 {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 24px;
+  margin: 20px 0;
+}
+.dotted {
+  border-style: dotted;
+  border-color: #000;
+}
+.style-block {
+  border: 1px solid #ff8900;
+  background: #eeeeee;
+  text-align: center;
+  padding: 5px;
+}
+.content-block .row + .row {
+  margin-top: 20px;
+}
+@media (max-width: 767px){
+  .content-block .row {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+  .content-block .row > [class*="col-"] {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .content-block [class*="col-sm"]:not([class*="col-xs"]) + [class*="col-sm"]:not([class*="col-xs"]){
+    margin-top: 20px;
+  } 
+}
+
+@media (max-width: 530px){
+  .content-block h1 {
+    font-size: 20px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .content-block {
+    padding: 15px;
+  }
+  .content-block hr {
+    margin: 15px 0;
+  }
+  .content-block [class*="col-sm"]:not([class*="col-xs"]) + [class*="col-sm"]:not([class*="col-xs"]){
+    margin-top: 15px;
+  } 
+  .content-block .row + .row {
+    margin-top: 15px;
+  }
+  .content-block h2 {
+    margin: 15px 0;
+    font-size: 18px;
+  }
 }
