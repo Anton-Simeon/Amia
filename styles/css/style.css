@@ -4995,7 +4995,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 
 .content-block {
   background: rgba(255, 255, 255, 0.8);
-  border: 1px solid #ff8900;
+  border: 1px solid #c1c1c1;
   padding: 20px 20px 30px 20px;
   font-size: 14px;
   line-height: 1.4;
@@ -5028,7 +5028,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   border-color: #000;
 }
 .style-block {
-  border: 1px solid #ff8900;
+  border: 1px solid #c1c1c1;
   background: #eeeeee;
   text-align: center;
   padding: 5px;
