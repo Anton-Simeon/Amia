@@ -1088,11 +1088,15 @@ a, button {
 .after-header .soc-list li a {
   display: block;
   width: 40px;
+  border-radius: 100%;
   height: 40px;
+  position: relative;
 }
 .after-header .soc-list li a:before {
   height: 100%;
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 .after-header .soc-list li .facebook:before {
   background-position: -260px -67px;
@@ -1102,6 +1106,35 @@ a, button {
 }
 .after-header .soc-list li .google:before {
   background-position: -533px -39px;
+}
+.after-header .soc-list li .draugiem:before {
+  background-position: -596px -24px;
+}
+.after-header .soc-list li .facebook {
+  background-color: #0063ae;
+}
+.after-header .soc-list li .google {
+  background-color: #ff1717;
+}
+.after-header .soc-list li .draugiem {
+ background-color: #ff8a00;
+}
+.after-header .soc-list li a:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: " ";
+  height: 100%;
+  border-radius: 100%;
+  z-index: 1;
+}
+/*.after-header .soc-list li a:hover{
+  border-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}*/
+.after-header .soc-list li a:hover:after{
+  background: rgba(0, 0, 0, 0.15);
 }
 .after-header .advantages {
   display: inline-block;
@@ -1593,6 +1626,10 @@ a, button {
 .rating-block {
   padding: 0;
   margin: 12px 0 5px 0;
+  
+}
+.item-info-wrap .rating-block  {
+  height: 15px;
 }
 .rating-block li{
   background-image: url(../../images/stars.png);
