@@ -3854,6 +3854,22 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   width: auto;
 }
 
+.position-key-wrap {
+  position: absolute;
+  bottom: 2px;
+  left: 43px;
+}
+.position-key {
+  background: #f00;
+  float: left;
+  height: 2px;
+  width: 7px;
+  margin-right: 1px;
+}
+.position-key:nth-child(2n + 2){
+  margin-right: 7.4px;
+}
+
 @media (min-width: 320px) and (max-width: 767px) {
   /***************************   HEADER   ************************************/
   /***************************   BOOTSTRAP MENU   ****************************/
@@ -4886,8 +4902,11 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   border-radius: 0; 
   color: #ff4400;
   height: 24px;
-  padding: 4px 12px;
+  padding: 4px;
   font-weight: bold;
+  word-spacing: 4.1px;
+  font-size: 13px;
+  letter-spacing: 0.1px;
   background: linear-gradient(#feedc1 -14.8px, rgba(255, 252, 245, 0.8) 99%);
 }
 .call-me .form-control:focus {
