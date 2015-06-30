@@ -716,7 +716,6 @@ jQuery(function ($) {
 
 		function cleanForm() {
 			valLenghtInput = getCaretPos(document.getElementById('call'));
-			document.getElementById('cs').value = valLenghtInput;
 		}
 
 		var calVal = $('#call').val().replace(/ /g,"");
