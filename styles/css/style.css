@@ -1632,15 +1632,38 @@ a, button {
   height: 15px;
 }
 .rating-block li{
-  background-image: url(../../images/stars.png);
-  background-position: -1px -1px;
+  background-image: url(../../images/sprite.png);
+  background-position: -620px -64px;
   height: 12px;
   display: inline-block;
   width: 12px;
 }
 .rating-block li.active {
-  background-position: -1px -14px;
+  background-position: -621px -77px;
 }
+.rating-block-big {
+  margin: 16px 0;
+  font-size: 0;
+}
+.rating-block-big li {
+  background-image: url(../../images/sprite.png);
+  background-position: -598px -65px;
+  height: 17px;
+  display: inline-block;
+  font-size: 13px;
+  width: 17px;
+}
+.rating-block-big li.active, .rating-block-big li.active-hover {
+  background-position: -598px -98px;
+}
+.rating-block-big li.active-hover ~ li:not(.active-hover){
+	background-position: -598px -65px !important;
+}
+.rating-block-big.rating-hover li{
+	cursor: pointer; 
+}
+
+
 .sidebar .ratings-title .glyphicon-triangle-bottom {
   display: none;
 }
@@ -2762,7 +2785,9 @@ a, button {
 .owl-carousel .owl-item {
   padding: 10px;
 }
-
+.owl-carousel:not(.main-slider) .owl-item{
+  text-align: center;
+}
 .owl-prev, .owl-next {
   position: absolute;
   top: 42%;
@@ -5834,9 +5859,7 @@ label.error {
 .bank-translation, .bank-translation {
 	overflow: hidden;
 }
-.owl-item {
-	text-align: center;
-}
+
 
 .product h1 {
 	font-size: 31px;
@@ -6279,6 +6302,175 @@ img.colorsizeimgsel:hover {
 .form-horizontal hr {
 	border-color: #bbb;
 }
+.product-main-info {
+	background: #fff;
+	border: 1px solid #c1c1c1;
+	margin-top: 50px;
+	padding: 20px;
+}
+
+.product-main-info h3 {
+	color: #515151;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 1.4;
+	margin: 0 0 30px;
+	text-transform: uppercase;
+}
+.description-item {
+	font-size: 13px;
+	color: #515151;
+}
+.description-item h6 {
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	line-height: 18px;
+}
+.description-item div {
+	line-height: 18px;
+}
+.description-item li{
+	padding: 10px 15px;
+}
+.description-item li:nth-child(2n) {
+    background-color: #f5f5f5;
+}
+.product-main-info .recent-slider .item {
+	border: 2px solid #eee;
+}
+.comment-block {
+	background: #fff;
+	border: 2px solid #f5f5f5;
+	height: 267px;
+}
+.coment-btn-wrap {
+	background: #f5f5f5;
+	text-align: center;
+	height: 100%;
+	font-size: 0;
+}
+.coment-btn-wrap:after {
+	content: " ";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+}
+.buttonGray-big {
+	line-height: 1.5;
+}
+.average-rating-title{
+	color: #ff8900;
+	font-size: 14px;
+	font-weight: bold;
+	margin-right: 5px;
+	text-align: center;
+	text-transform: uppercase;
+}
+.average-rating .rating-block-big {
+	display: inline-block;
+	vertical-align: top;
+	margin: -3px 0 0 20px;
+}
+.wrap-rating-line {
+	max-width: 340px;
+}
+.wrap-rating-line h6 {
+	font-size: 12px;
+	font-weight: 700;
+	color: #515151;
+	float: left;
+	margin-top: -4px;
+	width: 80px;
+}
+.rating-line {
+	background-color: #f5f5f5;
+	height: 9px;
+	margin-left: 80px;
+}
+.rating-line > div {
+	background-color: #ff8900;
+	height: 9px;
+	width: 0;
+}
+.wrap-rating-line li:after {
+	content: " ";
+	clear: both;
+	display: table;
+	width: 100%;
+}
+.wrap-rating-line li {
+	margin-top: 20px;
+}
+.rating-wrap-average {
+	height: 100%;
+	font-size: 0;
+	padding: 0 25px;
+}
+.rating-wrap-average:after {
+	content: " ";
+	display: inline-block;
+	vertical-align: middle;
+	height: 100%;
+	margin-right: -2px;
+}
+.rating-wrap-inline {
+	font-size: 13px;
+	display: inline-block;
+	vertical-align: middle;
+	text-align: left;
+}
+.background-gray {
+	background: #f8f8f8;
+}
+.helpful-block {
+	padding: 20px;
+}
+.like, .dislike {
+	font-style: normal;
+	display: inline-block;
+	vertical-align: middle;
+	color: #a8a8a8;
+	position: relative;
+	padding: 0 10px 0 24px;
+}
+.like:hover, .dislike:hover {
+	color: #a8a8a8;
+}
+.like:before {
+	background-position: -130px -104px;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	left: 0;
+	top: -8px;
+}
+.like:hover:before {
+	background-position: -106px -104px;
+}
+.dislike:before {
+	background-position: -130px -125px;
+	height: 22px;
+	width: 22px;
+	position: absolute;
+	left: 0;
+	top: -3px;
+}
+.dislike:hover:before {
+	background-position: -106px -124px;
+}
+.helpful-block .rating-block-big {
+	margin: 0 10px 0 0;
+	display: inline-block;
+	vertical-align: middle;
+}
+.helpful {
+	margin-right: 10px;
+}
+.writeYourReview {
+
+}
+
 
 @media (min-width: 768px){
 	.ShopingCart {

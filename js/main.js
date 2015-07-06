@@ -201,7 +201,7 @@ jQuery(function ($) {
 		$('.categories-article ul a.active').each(function(){
 			var thisUlActive = $(this);
 			var thisUlActiveLenght = thisUlActive.parent().prevAll().length;
-			if(thisUlActiveLenght > 5){
+			if(thisUlActiveLenght > 4){
 				thisUlActiveLenght = thisUlActive.parent().parent().children(':last-child').prev().prevAll(':not(.visible-element)').show();
 				thisUlActiveLenght = thisUlActive.parent().parent().children(':last-child').show();
 				thisUlActiveLenght = thisUlActive.parent().parent().children(':last-child').prev().hide();
@@ -1088,6 +1088,28 @@ jQuery(function ($) {
 	    	bar: '.scroller__bar'
 		});
 	}
+
+	var colLiActive, colLiActivePrev, colLiLastActive;
+
+	$('.rating-hover li').hover(function() {
+		
+    	$(this).addClass("active-hover");
+    	$(this).prevAll().addClass("active-hover");
+    	$(this).nextAll().removeClass("active-hover");
+
+  	}, function() {
+
+  		$(this).parent().children().removeClass("active-hover");
+
+  	});
+
+
+  	$('.rating-hover li').click(function(){
+  		$(this).addClass("active");
+  		$(this).prevAll().addClass("active");
+  		$(this).nextAll().removeClass("active");
+  		return false
+  	});
 
 
 	/* END product */
