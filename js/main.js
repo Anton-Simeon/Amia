@@ -360,7 +360,10 @@ jQuery(function ($) {
 				step: 1,
 				prefix: "€",
 				grid: true,
-	onFinish:function(){LoadCategoryProducts();}
+				onFinish:function(){
+					$("#select-pagination").val("1");
+					LoadCategoryProducts();
+				}
 		});
 		//endregion
 
