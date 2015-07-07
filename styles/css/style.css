@@ -1653,6 +1653,23 @@ a, button {
   font-size: 13px;
   width: 17px;
 }
+.rating-block-big-lg {
+  margin: 14px 0 15px 0;
+  font-size: 0;
+}
+.rating-block-big-lg li {
+  background-image: url(../../images/sprite.png);
+  background-position: -56px -123px;
+  height: 29px;
+  display: inline-block;
+  font-size: 13px;
+  width: 29px;
+}
+.rating-block-big-lg li.active{
+  background-position: -22px -123px;
+}
+
+
 .rating-block-big li.active, .rating-block-big li.active-hover {
   background-position: -598px -98px;
 }
@@ -2494,6 +2511,7 @@ a, button {
 .wrap-top-list-item {
   margin: 10px -6px;
   font-size: 0;
+  min-height: 317px;
 }
 .wrap-top-list-item:after {
   content: " ";
@@ -2506,6 +2524,23 @@ a, button {
   vertical-align: top;
   font-size: 12px;
 }
+
+.empty-shopping-cart {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin: 80px 0;
+  display: block;
+  font-weight: 700;
+}
+
+.slider-wrap-product {
+  min-height: 900px;
+}
+.slider-wrap-product > ul > li {
+  height: 300px;
+  overflow: hidden !important;
+}
+
 @media (min-width: 320px) and (max-width: 420px) {
 
   .middle-content .top-list-item {
@@ -5862,15 +5897,14 @@ label.error {
 
 
 .product h1 {
-	font-size: 31px;
+	font-size: 24px;
 	font-weight: 300;
 	line-height: 44px;
 	color: #464646;
-	margin: 10px 0;
+	margin: -18px 0 25px;
 	text-transform: uppercase;
 	border-bottom: 1px solid #ff8900;
-	padding-bottom: 20px;
-	margin-bottom: 36px;
+	padding-bottom: 10px;
 }
 .product_image_big {
 	background: #fff;
@@ -5884,9 +5918,9 @@ label.error {
 .product_image_big img{
 	display: inline-block;
 	vertical-align: middle;
-	max-width: 100%;
+	max-width: 95%;
 	margin: auto;
-	max-height: 100%;
+	max-height: 95%;
 }
 .info-product:after {
 	content: " ";
@@ -6142,7 +6176,7 @@ img.colorsizeimgsel:hover {
 }
 
 .container-scroll {
-	max-height: 354px;
+	max-height: 248px;
 	padding-right: 16px;
 }
 .content-scroll {
@@ -6467,10 +6501,138 @@ img.colorsizeimgsel:hover {
 .helpful {
 	margin-right: 10px;
 }
-.writeYourReview {
-
+.attribute-product {
+  background: #fff;
+  display: table;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #c1c1c1;
+}
+.attribute-product li {
+  display: table-row;
+  width: 100%;
+}
+.attribute-product li > div {
+  display: table-cell;
+  width: 50%;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.4;
+  border-top: 1px solid #c1c1c1;
+  padding: 7px 15px;
+}
+.attribute-product li:first-child > div {
+  border-top: none;
+}
+.attribute-product li > div:first-child {
+  border-right: 1px solid #c1c1c1;
 }
 
+
+.benefits {
+  margin-top: 30px;
+}
+
+.benefits div {
+
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  font-family: Arial;
+  min-height: 38px;
+}
+.benefits .benefit_3 {
+  margin-right: 0;
+}
+.benefits div p {
+  text-transform: capitalize;;
+}
+.benefits div span {
+  color: #FF8900;
+  text-transform: uppercase;
+}
+.benefit{
+  position: relative;
+  cursor: pointer;
+  padding: 0 10px 0 55px;
+  margin: 15px 0;
+  float: left;
+  width: 50%;
+}
+.benefit_1:before {
+  content: '';
+  width: 42px;
+  height: 40px;
+  position: absolute;
+  left: 0px;
+  background-position: -275px -106px;
+  top: -2px;
+}
+.benefit_2:before {
+  content: '';
+  width: 51px;
+  height: 40px;
+  position: absolute;
+  left: 0px;
+  background-position: -321px -106px;
+  top: -7px;
+}
+.benefit_3:before {
+  content: '';
+  width: 50px;
+  height: 38px;
+  position: absolute;
+  left: 0px;
+  background-position: -220px -110px;
+  top: -7px;
+}
+.benefit p {
+  color: #464646;
+}
+.benefit_4:before {
+  content: '';
+  width: 49px;
+  height: 37px;
+  position: absolute;
+  left: 0px;
+  background-position: -163px -110px;
+  top: -2px;
+}
+div.mypopup{
+  position:absolute;
+  display:none;
+  bottom:0px;
+  margin-left:-5px;
+  width:180px;
+  top: 0px;
+  z-index: 400;
+  left: 0;
+}
+.benefits .benefit_1:hover div.mypopup{
+    display: block;
+}
+.benefits .benefit_2:hover div.mypopup{
+    display: block;
+}
+.benefits .benefit_3:hover div.mypopup{
+  display: block;
+}
+.benefits .benefit_4:hover div.mypopup{
+  display: block;
+}
+.mytitle {
+  font-size:12px;
+  text-align:center;
+  color:ffff99;
+  padding:10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  background:#fff;
+  border:1px #d36000 solid;
+  margin-top:45px;
+}
 
 @media (min-width: 768px){
 	.ShopingCart {

@@ -180,135 +180,50 @@
         </div>
         <!-- TOP CONTENT -->
         
-        <div class="stepBlock notActive stepBlock1">
+        <div class="stepBlock stepBlockActive stepBlock1">
             <div class="stepName">ШАГ 1:  Просмотреть корзину </div>
+            <div class="stepContent">
+                <form id="formshopaddtocart" method="post" action="/ru/shopaddtocart.asp">
+                    <input type="hidden" id="shopaddtocartoperation">
+                    <input type="hidden" id="shopaddtocartoperation2">
+                    <input type="hidden" value="799530" id="productid">
+                    <input type="hidden" value="YWQA7581UUHU2463SLNA7658YJUG3245WHMR5147FLGW0001VRVK5580CXKS4288XZGL7075DNBS0673WBYH2605LJPX1534AXMN" name="genpredefinedsecuritycode">
+
+                    <div class="stepTitle">ШАГ 1:  Просмотреть корзину </div>
+                    <div class="stepBlockContent">
+                        <div class="ShopingCart">
+                            <div class="row10 row step-block-product step-block-product-top">
+                                <h5 class="col-sm-4">Описание</h5>
+                                <div></div>
+                                <h5 class="col-sm-4">Количество</h5>
+                                <h5 class="col-sm-4">Сумма</h5>
+                                <div></div>
+                            </div>
+                            <!-- Item -->
+                        </div>
+
+                        <div class="empty-shopping-cart">Количество наименований в корзине: 0</div>
+
+                        <div class="CouponBlock">
+                            <label>ЕСТЬ КУПОН ИЛИ ПОДАРОЧНАЯ КАРТА? </label>
+                            <input type="text" placeholder="Введите номер купона " class="form-control" name="couponId">
+                        </div>
+                        <!--  -->
+                        <div class="stepFooter">
+                            <div class="wrap">
+                                <div class="TotalSumCart">Стоимость Товара: <span class="sum">€165,30</span>&nbsp;<span id="discountTotal" style="display: none;"> - €0,00</span></div>
+                                <button class="btn btn-primary">Оформить Заказ <i class="icon-next sprite"></i></button>
+                            </div>
+                            <a class="backToShopping sprite" href="#">Продолжить покупку</a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
         </div>
 
-        <div class="stepBlock stepBlockActive stepBlock2 notActive noHover">
+        <div class="stepBlock notActive stepBlock2">
             <div class="stepName">ШАГ 2: ВХОД / РЕГИСТРАЦИЯ </div>
-
-            <div class="stepContent">
-                <div class="stepTitle">ШАГ 2: ВХОД / РЕГИСТРАЦИЯ </div>
-                <div class="stepBlockContent">
-
-                    <div class="checkoutOptiosBlock registerUser">
-                        <div class="col-sm-5 checkoutOptiosBlock-left">
-                            <h6>Новые клиенты</h6>
-                            <p>Если Вы никогда не регистрировались или заказывали у нас , то просто заполните основную форму.</p>
-                        </div>
-                        <div class="checkoutOptiosBlock-right col-sm-7">
-                            <form class="form-horizontal validate">
-                                <input type="hidden" value="SAVE" id="byz_chk_del_mode" name="byz_chk_del_mode">
-                                <input type="hidden" value="N" id="byz_chk_del_ajax" name="byz_chk_del_ajax">
-                                <input type="hidden" value="" id="byz_chk_bil_userid" name="byz_chk_bil_userid">
-                                <input type="hidden" value="" id="pb_forgot_login_info" name="pb_forgot_login_info">
-                                <input type="hidden" id="shopstep2peration">
-                                <div class="RegisterCustomerRow">
-                                    <h6>РЕГИСТРАЦИЯ </h6>
-
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">E-mail: *</label>
-                                    <div class="col-sm-8">
-                                        <input type="email" value="" id="byz_chk_bil_email" name="byz_chk_bil_email" class="form-control">
-                                    </div>
-                                </div>
-
-                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Пароль: *</label>
-                                    <div class="col-sm-8">
-                                        <input type="password" value="" id="byz_chk_bil_pwd" name="byz_chk_bil_pwd" class="form-control">
-                                    </div>
-                                </div>
-
-                                <hr>
-
-                                <h6>Дополнительная информация</h6>
-
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Имя:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_firstname" name="byz_chk_bil_firstname" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Фамилия:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_lastname" name="byz_chk_bil_lastname" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Компания:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_company" name="byz_chk_bil_company" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Адрес:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_address" name="byz_chk_bil_address" class="form-control">
-                                    </div>
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Город:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_town" name="byz_chk_bil_town" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Почтовый индекс:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_zip" name="byz_chk_bil_zip" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Телефон:</label>
-                                    <div class="col-sm-8">
-                                        <input type="text" value="" id="byz_chk_bil_phone1" name="byz_chk_bil_phone1" class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label class="col-sm-4 control-label">Как Вы узнали о нас?</label>
-
-                                    <!-- Dynamic PopList Creation for VP-ASP BYZ025 (V08/09-OCT-2012) For support and more information visit http://www.bigyellowzone.com or http://www.bigyellowkey.com -->
-                                    <div class="col-sm-8">
-                                        <select class="form-control" id="byz_chk_bil_hearaboutus" name="byz_chk_bil_hearaboutus">
-                                            <option selected="selected" value="">Выбрать</option>
-                                            <option value="Поисковая Система">Поисковая Система</option>
-                                            <option value="Газета">Газета</option>
-                                            <option value="Друг">Друг</option>
-                                            <option value="Покупатель">Покупатель</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-sm-8 col-sm-offset-4 control-label"> <input type="checkbox" checked="checked" id="byz_chk_bil_maillist" name="byz_chk_bil_maillist"> Подпишитесь в наш список почтовой рассылки</label>
-                                </div>
-
-
-                                <div class="buttons col-sm-8 col-sm-offset-4">
-                                    <a class="link-btn pull-left" href="#">Вернуться к Входу</a>
-                                    <button type="submit" class="buttonGray pull-right">РЕГИСТРАЦИЯ</button>
-                                </div>
-
-
-                            </form>
-                        </div>
-                    </div>
-                    <!--  -->
-                    <div class="stepFooter">
-                        <a class="backToShopping sprite" href="#">ВЕРНУТЬСЯ К КОРЗИНЕ </a>
-                    </div>
-
-                </div>
-            </div>
-
         </div>
 
         <div class="stepBlock notActive noHover stepBlock3">
@@ -1058,7 +973,6 @@
 <script src="js/lib/ion.rangeSlider.js"></script>
 <script src="js/lib/jquery.jcarousel.min.js"></script>
 <script src="js/lib/jquery.jcarousel-control.min.js"></script>
-<script src="js/jquery.validate.js"></script>
 <script src="js/main.js"></script>
 
 
