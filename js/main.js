@@ -1023,11 +1023,11 @@ jQuery(function ($) {
 	// checkout
 
 	 $(".validate").each(function(){
-	 	$(this).validate({
-		  submitHandler: function(form) {
-		    $(form).ajaxSubmit();
-		  }
-	  });
+	 	// $(this).validate({
+		 //  submitHandler: function(form) {
+		 //    $(form).ajaxSubmit();
+		 //  }
+	  // });
 	});
 
 

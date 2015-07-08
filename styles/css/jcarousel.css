@@ -4,7 +4,7 @@
     min-height: 265px;
 }
 
-.slider-wrap ul {
+.slider-wrap > ul {
     position: absolute;
     /*height: 20000em;*/
     list-style: none;
@@ -13,7 +13,7 @@
     height: 190px;
 }
 
-.slider-wrap ul li {
+.slider-wrap > ul > li {
     display: table;
     overflow: hidden;
     margin: 10px 0;
