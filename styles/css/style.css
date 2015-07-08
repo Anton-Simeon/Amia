@@ -2512,7 +2512,7 @@ a, button {
 .wrap-top-list-item {
   margin: 10px -6px;
   font-size: 0;
-  min-height: 317px;
+  min-height: 334px;
 }
 .wrap-top-list-item:after {
   content: " ";
