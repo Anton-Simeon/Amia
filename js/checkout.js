@@ -41,4 +41,64 @@ jQuery(function ($) {
     //endregion
 
 
+    // checkout
+
+     $(".validate").each(function(){
+        $(this).validate({
+          submitHandler: function(form) {
+            $(form).ajaxSubmit();
+          }
+      });
+    });
+
+
+    function checkedFun(){
+        if($('#byz_chk_method_codevpaspstdlookupLV5').is(':checked')){
+            $('#StroOther1').attr('disabled', 'disabled');
+            if($('#StroOther1').is(':checked')){
+                $('#StroOther1').removeAttr('checked');
+            }
+            $('.wrap-map-canvas-hide').show();
+        }
+        if($('#byz_chk_method_codevpaspstdlookupLV3').is(':checked')){
+            $('#StroOther1').removeAttr('disabled');
+            $('.wrap-map-canvas-hide').hide();
+        }
+    }
+
+    checkedFun();
+
+    $('#byz_chk_method_codevpaspstdlookupLV5, #byz_chk_method_codevpaspstdlookupLV3').change(function(){
+        checkedFun();
+    });
+
+
+    function translation(){
+        $('.bank-card input, .bank-translation input').removeAttr('checked');
+        if($('#StroOther1').is(':checked')){
+            $('.bank-card').hide();
+            $('.bank-translation').hide();
+        }
+        if($('#StroOther2').is(':checked')){
+            $('.bank-card').show();
+            $('.bank-translation').hide();
+        }
+        if($('#StroOther3').is(':checked')){
+            $('.bank-card').hide();
+            $('.bank-translation').show();
+            $('.bank-translation input').prop('checked', true);
+        }
+    }
+
+    translation();
+
+
+    $('#StroOther1, #StroOther2, #StroOther3').change(function(){
+
+        translation();
+    });
+
+    // END checkout
+
+
 });
