@@ -218,7 +218,7 @@ jQuery(function ($) {
 			return false
 		});
 
-		$('.view-all').click(function(){
+		$('.categories-wrap .view-all').click(function(){
 			var viewAll = $(this);
 			viewAll.parent().next().show();
 			viewAll.parent().hide();
@@ -226,7 +226,7 @@ jQuery(function ($) {
 			return false
 		});
 
-		$('.hide-all').click(function(){
+		$('.categories-wrap .hide-all').click(function(){
 			var hideAll = $(this);
 			hideAll.parent().prev().show();
 			hideAll.parent().hide();

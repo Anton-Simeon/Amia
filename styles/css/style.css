@@ -3111,6 +3111,7 @@ a, button {
   margin-top: -118px;
   width: 752px;
   z-index: 999999;
+  background: #f5f5f5;
   border: 1px solid #000;
 }
 .modal-log .glyphicon-remove {
@@ -3119,7 +3120,9 @@ a, button {
   right: 10px;
   color: #ff8900;
   cursor: pointer;
+
 }
+
 .modal-log h3 {
   font-size: 14px;
   font-weight: bold;
@@ -7103,6 +7106,9 @@ width: 100%;
 .top-list-item-style-horizontal.owl-theme .owl-controls .owl-buttons .owl-next {
 	margin-right: -2px;
 }
+.cartItemPhotoBlock {
+  max-width: 130px;
+}
 
 /* END .top-list-item-style */
 
@@ -7147,6 +7153,15 @@ width: 100%;
 		width: 74%;
 	}
 }
+@media (max-width: 991px){
+  .modal-log .registration-block {
+    padding: 20px;
+    min-height: 10px;
+  }
+  .modal-log .sign-in-block {
+    padding: 20px;
+  }
+}
 @media (max-width: 900px){
 	.product-left {
 		width: 71%;
@@ -7174,6 +7189,9 @@ width: 100%;
 	}
 }
 @media (max-width: 767px){
+  .modal-log .sign-in-block input {
+    width: 100%;
+  }
   .content-block .row {
     margin-left: -10px;
     margin-right: -10px;
