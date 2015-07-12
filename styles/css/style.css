@@ -5684,17 +5684,10 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 }
 .checkoutOptiosBlock-bg {
 	z-index: 1;
+
 }
-.checkoutOptiosBlock-bg:before {
-	position: absolute;
-	content: " ";
-	top: 0;
-	bottom: 0;
-	width: 100%;
-	background: #f5f5f5;
-	right: 0;
-	z-index: -1;
-	width: 41.6667%;
+.checkoutOptiosBlock-bg .checkoutOptiosBlock-right {
+  float: none;
 }
 .checkoutOptiosBlock-right.TotalSumCart {
 	position: relative;
@@ -5816,6 +5809,9 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 .card-block {
 	padding: 5px 20px 20px 5px;
 }
+.card-block .imgBlock {
+  min-height: 55px;
+}
 .imgBlock {
 	margin-bottom: 10px;
 	font-size: 13px;
@@ -5907,7 +5903,8 @@ label.error {
 	width: 100%;
 }
 .bank-translation .customRadio, .bank-card .customRadio {
-	float: left;
+	display: inline-block;
+  vertical-align: bottom;
 }
 .wrap-map-canvas{
 	margin-top: -110px;
@@ -6053,7 +6050,7 @@ label.error {
 	background-color: #d8d8d8;
 	color: #fff;
 }
-#colorsizeimg, #socialMore, .dropdown-wrap {
+#colorsizeimg, #socialMore, .dropdown-wrap, .checkoutOptiosBlock-bg  {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -6127,7 +6124,7 @@ label.error {
 }
 .select_products_img {
 	border:0px solid blue; 
-	margin: 0.625%;
+	margin: 3px 0.625%;
 	display: inline-block;
 	vertical-align: top;
 	text-align:center; 
@@ -6613,6 +6610,9 @@ img.colorsizeimgsel:hover {
   font-family: Arial;
   min-height: 38px;
 }
+.benefits3 .benefit {
+  width: 33.33%;
+}
 .benefits .benefit_3 {
   margin-right: 0;
 }
@@ -6823,21 +6823,27 @@ textarea.form-control {
 .info-bank-wrap {
 	position: relative;
 }
-.info-bank {
-	position: absolute;
-	top: 100%;
-	margin-top: 20px;
-	left: 50%;
-	z-index: 2;
-	font-size: 13px;
-	background: #fff;
-	box-shadow: 0 0 7px #cdcdcd;
-	padding: 20px;
-	line-height: 1.4;
-	border-radius: 5px;
+.info-bank-container {
+  position: absolute;
+  left: 50%;
 	margin-left: -200px;
-	width: 400px;
+  top: 100%;
+  height: 20px;
+  width: 400px;
 	display: none;
+}
+.info-bank {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 2;
+  font-size: 13px;
+  background: #fff;
+  box-shadow: 0 0 7px #cdcdcd;
+  padding: 20px;
+  line-height: 1.4;
+  border-radius: 5px;
+  width: 100%;
 }
 .info-bank:after {
 	content: " ";
@@ -6869,7 +6875,7 @@ textarea.form-control {
 	border-right: 10px solid transparent;
 	z-index: 1;
 }
-.info-bank-wrap:hover .info-bank {
+.info-bank-wrap:hover .info-bank-container {
 	display: block;
 }
 
