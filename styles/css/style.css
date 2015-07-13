@@ -754,6 +754,7 @@ a, button {
   padding: 18px 5px 21px 0;
   height: 51px;
   width: 105px;
+  color: #fff;
   vertical-align: middle;
 }
 .header a.basket.sprite:before{
@@ -872,6 +873,7 @@ a, button {
 }
 .header .language-list li a {
   padding: 3px;
+  color: #fff;
 }
 .header .language-list li a:hover {
   background: #ffa133;
