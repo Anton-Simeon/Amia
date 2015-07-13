@@ -7247,6 +7247,9 @@ textarea.form-control {
 .imgBlock-inside {
   border: 4px solid #959595;
 }
+.step-info-last {
+  margin-top: -22px;
+}
 @media (min-width: 1150px){
   .top-list-item-style .one-slide:hover .more-information, .top-list-item-style .one-slide:hover .right-block-info {
   display: block;
