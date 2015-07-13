@@ -21,12 +21,13 @@
 
 <body id="main">
 <!-- HEADER -->
+<!-- HEADER -->
 <header class="header" id="header">
     <!-- BOOTSTRAP MENU -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <button type="button" class="navbar-toggle navbar-toggle-menu collapsed">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -38,18 +39,17 @@
                     </a>
                 </h1>
             </div>
-            <div id="navbar" class="collapse navbar-collapse">
+            <div class="collapse navbar-toggle-content navbar-collapse">
                 <ul class="main-nav nav navbar-nav">
                     <li class="active sale"><a href="#">Распродажа</a></li>
                     <li class="catalog"><a href="#">Каталог</a></li>
-                    <!--<li class="how-pay"><a href="#">Как купить?</a></li>-->
-                    <li class="delivery"><a href="#">Оплата и доставка Оплата и доставка</a></li>
+                    <!-- <li class="how-pay"><a href="#">Как купить?</a></li> -->
+                    <li class="delivery"><a href="#">Оплата и доставка</a></li>
                     <li class="contacts"><a href="#">Контакты</a></li>
                 </ul>
-                <span class="glyphicon glyphicon-align-justify"></span>
                 <nav class="sub-panel">
                     <div class="basket-wrap">
-                        <a href="#" class="basket">1 ТОВАР</a>
+                        <a href="#" class="basket sprite"> <span class="num-basket">1</span> <span>ТОВАР</span></a>
                         <div class="open-basket">
                             <div class="basket-item-wrap">
                                 <div class="basket-item-body">
@@ -94,9 +94,9 @@
     <div class="sub-header">
         <div class="container">
             <div class="tel-wrap">
-                <a class="header-tel col-xs-3 col-sm-3 col-md-2" href="tel:+37166116723">+ 371 66 11 67 23</a>
+                <a class="header-tel sprite col-xs-3 col-sm-3 col-md-2" href="tel:+37166116723">+ 371 66 11 67 23</a>
             </div>
-            <div class="form-group col-xs-12 col-sm-5 col-sm-offset-1 col-md-8">
+            <div class="form-group col-xs-12">
                 <select name="search" id="select-search" class="form-control">
                     <option value="women's-clothing">Search in all</option>
                     <option value="women's-clothing">Women's clothing</option>
@@ -110,7 +110,7 @@
                 <div class="search-wrap">
                     <form action="#">
                         <input type="text" class="form-control" placeholder="Найти..">
-                        <button type="submit" class="submit"></button>
+                        <button type="submit" class="submit sprite"></button>
                     </form>
                 </div>
             </div>
@@ -123,40 +123,43 @@
     <!-- END SUB HEADER -->
     <div class="after-header">
         <div class="container">
+            <form class="call-me">
+                <div>
+                    <input id="call" class="form-control" type="text" name="call-me">
+                    <input id="call-hidden" class="form-control" type="hidden" value="">
+                    <div class="position-key-wrap">
+                        <div class="position-key position-key1"></div>
+                        <div class="position-key position-key2"></div>
+                        <div class="position-key position-key3"></div>
+                        <div class="position-key position-key4"></div>
+                        <div class="position-key position-key5"></div>
+                        <div class="position-key position-key6"></div>
+                        <div class="position-key position-key7"></div>
+                        <div class="position-key position-key8"></div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-orange">ПОЗВОНИТЕ МНЕ</button>
+                </div>
+            </form>
             <ul class="soc-list list-inline col-md-2">
-                <li><a class="facebook" href="#"></a></li>
-                <li><a class="vk" href="#"></a></li>
-                <li><a class="google" href="#"></a></li>
+                <li><a class="sprite facebook" href="#"></a></li>
+                <li><a class="sprite draugiem" href="#"></a></li>
+                <li><a class="sprite google" href="#"></a></li>
             </ul>
-            <ul class="advantages list-inline col-md-7">
-                <li class="guarantee col-xs-12 col-sm-4 col-md-4 col-lg-4"><span>14 day</span> return guarantee</li>
-                <li class="cash-payment col-xs-12 col-sm-4 col-md-4 col-lg-4">Maksājiet skaidrā naudā preci saņemot no kurjera</li>
-                <li class="delivery col-xs-12 col-sm-4 col-md-4 col-lg-4"><span>Delivery:</span> courier/self
+            <ul class="advantages list-inline col-md-7 col-xs-12">
+                <li class="guarantee col-xs-4"><span>14 day</span> return guarantee</li>
+                <li class="cash-payment col-xs-4"><span>Payment:</span>cash/credit
+                    card/bank</li>
+                <li class="delivery col-xs-4"><span>Delivery:</span> courier/self
                     -pickup</li>
-            </ul>
-            <ul class="achievements col-md-3">
-                <li>
-                    <a href="#" class="safe">
-                        <img src="images/save.png" alt="save" width="60" height="43"/>
-                        safe purchase
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="garant">
-                        <img src="images/garant.png" alt="garant" width="50" height="43" />
-                        100% guarantee
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hacker">
-                        <img src="images/hacker.png" alt="hacker" width="39" height="43" />
-                        hacker safe
-                    </a>
-                </li>
             </ul>
         </div>
     </div>
 </header>
+
+
+
 <!-- END HEADER -->
 <!-- CONTENT -->
 <div class="main-content-wrap">

@@ -1179,6 +1179,9 @@ jQuery(function ($) {
 
 	// END dropdown sosial
 
+	$('.navbar-toggle-menu').click(function(){
+		$('.navbar-toggle-content').toggleClass('active');
+	})
 
 	/* END product */
 

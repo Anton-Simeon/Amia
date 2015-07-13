@@ -551,10 +551,15 @@ th {
   box-sizing: border-box;
 }
 
-a, p, a:hover {
-  color: #fff;
+a{
+  color: #ff8900;
   text-decoration: none;
 }
+
+ a:hover {
+  color: #ff4400;
+    text-decoration: none;
+ }
 
 ul {
   list-style: none;
@@ -646,6 +651,7 @@ a, button {
   display: block;
   margin-left: 10px;
   min-height: 53px;
+  overflow: hidden;
 }
 .header .logo img {
   margin-top: 5px;
@@ -1681,6 +1687,7 @@ a, button {
 .rating-block-big-lg {
   margin: 10px 0 18px 0;
   font-size: 0;
+  min-height: 29px;
 }
 .rating-block-big-lg li {
   background-image: url(../../images/sprite.png);
@@ -4007,7 +4014,10 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   /***************************   END BOOTSTRAP MENU   ************************/
 
   .header .logo img {
-    margin: 8px 0 0 15px;
+    display: block;
+    height: auto;
+    margin: 8px 0 0 5px;
+    width: 84px;
   }
 
   .header .main-nav li {
@@ -4496,25 +4506,8 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
     background-position-x: 35%;
   }
 }
-@media (min-width: 768px) and (max-width: 991px) {
-
-  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
-    padding: 20px 15px;
-  }
-
-  /***************************   HEADER   ************************************/
-
-  .header > .navbar > .container {
-    padding: 0;
-  }
-
-  .header .glyphicon-align-justify {
-    display: none;
-  }
-  .header .sub-panel {
-    float: right;
-  }
-   .header a.basket span {
+@media (max-width: 991px) {
+     .header a.basket span {
     display: none;
   }
   .header a.basket {
@@ -4536,6 +4529,27 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
     font-weight: bold;
     border-radius: 100%;
   }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+    padding: 20px 15px;
+  }
+
+  /***************************   HEADER   ************************************/
+
+  .header > .navbar > .container {
+    padding: 0;
+  }
+
+  .header .glyphicon-align-justify {
+    display: none;
+  }
+  .header .sub-panel {
+    float: right;
+  }
+
+
   .header .language-list {
     margin-left: 5px;
   }
@@ -6033,7 +6047,7 @@ label.error {
 	background-color: #d8d8d8;
 	color: #fff;
 }
-#colorsizeimg, #socialMore, .dropdown-wrap, .checkoutOptiosBlock-bg  {
+#colorsizeimg, #socialMore, .dropdown-wrap {
   -moz-user-select: none;
   -khtml-user-select: none;
   -webkit-user-select: none;
@@ -6807,13 +6821,16 @@ textarea.form-control {
 .info-bank-wrap {
 	position: relative;
 }
+.info-bank .attribute-product {
+  margin: 10px 0;
+}
 .info-bank-container {
   position: absolute;
   left: 50%;
-	margin-left: -200px;
+	margin-left: -220px;
   top: 100%;
   height: 20px;
-  width: 400px;
+  width: 440px;
 	display: none;
 }
 .info-bank {
@@ -6859,8 +6876,10 @@ textarea.form-control {
 	border-right: 10px solid transparent;
 	z-index: 1;
 }
-.info-bank-wrap:hover .info-bank-container {
-	display: block;
+@media (min-width: 1049px){
+  .info-bank-wrap:hover .info-bank-container {
+  	display: block;
+  }
 }
 
 /* .top-list-item-style */
@@ -7549,6 +7568,54 @@ textarea.form-control {
   .sidebar {
     padding: 0;
   }
+  .header .navbar-collapse {
+    display: block;
+  }
+  .header .basket-wrap {
+    position: absolute;
+    bottom: 100%;
+    right: 50%;
+  }
+  .header .language-list {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-bottom: 23px;
+  }
+  .header .main-nav li a, .header .main-nav li {
+    height: auto;
+  }
+  .header .sub-panel {
+    padding: 0;
+  }
+  .header .link-login, .header .log-in {
+    display: none;
+  }
+  .header .main-nav {
+    display: none;
+  }
+    .header .sign-in {
+    display: none;
+  }
+  .header .navbar-toggle-content.active .sub-panel {
+    padding: 15px 0;
+  }
+  .header .navbar-toggle-content.active .link-login, .header .navbar-toggle-content.active .log-in {
+    display: inline-block;
+  }
+  .header .navbar-toggle-content.active .main-nav {
+    display: block;
+  }
+  .header .navbar-toggle-content.active .sign-in {
+    display: inline;
+  }
+  .header .open-basket {
+    left: -80px;
+    top: 100%;
+  }
+  .menu-wrapper {
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+  }
 
 
 }
@@ -7577,7 +7644,9 @@ textarea.form-control {
 }
 
 @media (max-width: 570px){
-
+  .call-me {
+    float: none;
+  }
 }
 
 @media (max-width: 530px){
