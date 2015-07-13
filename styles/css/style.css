@@ -5853,13 +5853,11 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 	padding-bottom: 30px;
 }
 .info-footer-content a {
-	color: rgba(0, 0, 238, 1);
 	text-decoration: underline;
 	margin: 2px 0 30px;
 	display: inline-block;
 }
 .info-footer-content a:hover {
-	color: rgba(0, 0, 238, 1);
 	text-decoration: none;	
 }
 .stepBlock {
