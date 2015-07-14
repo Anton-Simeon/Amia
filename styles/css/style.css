@@ -6847,8 +6847,9 @@ textarea.form-control {
   width: 100%;
 }
 .stepBlock3 .TotalSumCart > div:first-child {
-  padding-right: 20px;
   width: 100%;
+  height: 300px;
+  padding-right: 20px;
 }
 .stepBlock3 .TotalSumCart > div {
   display: table-cell;
@@ -7239,6 +7240,7 @@ textarea.form-control {
   margin-top: 10px;
   margin-left: 4px;
 }
+
 
 
 @media (min-width: 1150px){
