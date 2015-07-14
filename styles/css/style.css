@@ -6842,6 +6842,7 @@ textarea.form-control {
 }
 .info-bank-active {
   display: block;
+  min-height: 240px;
 }
 .stepBlock3 .TotalSumCart {
   display: table;
@@ -6849,7 +6850,7 @@ textarea.form-control {
 }
 .stepBlock3 .TotalSumCart > div:first-child {
   width: 100%;
-  height: 300px;
+  height: 240px;
   padding-right: 20px;
 }
 .stepBlock3 .TotalSumCart > div {
