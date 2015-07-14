@@ -5806,11 +5806,13 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 	padding-right: 0;
 }
 .card-block {
-	padding: 5px 20px 20px 5px;
-  min-height: 128px;
+	padding: 0;
+}
+.card-block .customRadio {
+  margin: 20px 0 20px 20px;
 }
 .card-block .imgBlock {
-  min-height: 55px;
+  min-height: 56px;
 }
 .imgBlock {
 	margin-bottom: 10px;
@@ -5890,7 +5892,7 @@ label.error {
 	color: rgba(200, 0, 0, 1);
 	margin-top: 5px;
 }
-.stepBlock3 .checkDekiveryGroup:first-child .customRadio {
+.checkDekiveryGroup.customRadio-wr .customRadio {
   min-height: 34px;
 }
 #map-canvas {
