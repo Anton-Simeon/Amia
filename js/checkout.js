@@ -82,11 +82,16 @@ jQuery(function ($) {
         if($('#StroOther2').is(':checked')){
             $('.bank-card').show();
             $('.bank-translation').hide();
+
+            thisCheck = $('.card-block input:checked');
+            cardblock();
         }
         if($('#StroOther3').is(':checked')){
             $('.bank-card').hide();
             $('.bank-translation').show();
-            $('.bank-translation input').prop('checked', true);
+            $('.bank-translation .customRadio:first-child input').prop('checked', true);
+            thisCheck = $('.card-block input:checked');
+            cardblock();
         }
     }
 
@@ -99,6 +104,35 @@ jQuery(function ($) {
     });
 
     // END checkout
+
+    var thisCheck;
+
+    function cardblock(){
+        var thisCheckId = thisCheck.attr('id');
+        $('.info-bank').removeClass('info-bank-active');
+        $('.info-bank[data-id="' + thisCheckId + '"]').addClass('info-bank-active');
+    }
+
+
+    $('.card-block input').change(function(){
+        thisCheck = $(this);
+        console.log('sdsa');
+        cardblock();
+    });
+
+
+    thisCheck = $('.card-block input:checked');
+    cardblock();
+
+
+    $('.card-block .customRadio').hover(function(){
+        thisCheck = $(this).children('input');
+        cardblock();
+    }, function(){
+        var thisCheckId = $('.card-block input:checked').attr('id');
+        $('.info-bank').removeClass('info-bank-active');
+        $('.info-bank[data-id="' + thisCheckId + '"]').addClass('info-bank-active');
+    });
 
 
 });

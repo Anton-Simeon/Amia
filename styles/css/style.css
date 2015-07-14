@@ -5807,6 +5807,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 }
 .card-block {
 	padding: 5px 20px 20px 5px;
+  min-height: 128px;
 }
 .card-block .imgBlock {
   min-height: 55px;
@@ -5888,6 +5889,9 @@ input.valid.form-control {
 label.error {
 	color: rgba(200, 0, 0, 1);
 	margin-top: 5px;
+}
+.stepBlock3 .checkDekiveryGroup:first-child .customRadio {
+  min-height: 34px;
 }
 #map-canvas {
 	height: 200px;
@@ -6824,57 +6828,31 @@ textarea.form-control {
 .info-bank .attribute-product {
   margin: 10px 0;
 }
-.info-bank-container {
-  position: absolute;
-  left: 50%;
-	margin-left: -220px;
-  top: 100%;
-  height: 20px;
-  width: 440px;
-	display: none;
-}
+
 .info-bank {
-  position: absolute;
-  top: 100%;
-  left: 0;
   z-index: 2;
   font-size: 13px;
   background: #fff;
-  box-shadow: 0 0 7px #cdcdcd;
   padding: 20px;
   line-height: 1.4;
-  border-radius: 5px;
+  text-transform: none;
+  width: 100%;
+  display: none;
+}
+.info-bank-active {
+  display: block;
+}
+.stepBlock3 .TotalSumCart {
+  display: table;
   width: 100%;
 }
-.info-bank:after {
-	content: " ";
-	display: block;
-	height: 0;
-	width: 0;
-	position: absolute;
-	bottom: 100%;
-	left: 50%;
-	margin-left: -10px;
-	border-bottom: 10px solid #fff;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	z-index: 1;
+.stepBlock3 .TotalSumCart > div:first-child {
+  padding-right: 20px;
+  width: 100%;
 }
-
-.info-bank:before {
-	content: " ";
-	display: block;
-	height: 0;
-	width: 0;
-	position: absolute;
-	bottom: 100%;
-	left: 50%;
-	margin-bottom: 1px;
-	margin-left: -10px;
-	border-bottom: 10px solid #cdcdcd;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	z-index: 1;
+.stepBlock3 .TotalSumCart > div {
+  display: table-cell;
+  vertical-align: bottom;
 }
 @media (min-width: 1049px){
   .info-bank-wrap:hover .info-bank-container {
