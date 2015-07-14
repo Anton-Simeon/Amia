@@ -6837,6 +6837,7 @@ textarea.form-control {
   line-height: 1.4;
   text-transform: none;
   width: 100%;
+  white-space: normal;
   display: none;
 }
 .info-bank-active {
