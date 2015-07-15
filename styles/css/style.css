@@ -6590,7 +6590,7 @@ img.colorsizeimgsel:hover {
 .attribute-product li > div {
   display: table-cell;
   width: 50%;
-  font-size: 11px;
+  font-size: 12px;
   text-transform: uppercase;
   font-weight: 700;
   line-height: 1.4;
@@ -6836,7 +6836,7 @@ textarea.form-control {
 
 .info-bank {
   z-index: 2;
-  font-size: 13px;
+  font-size: 15px;
   background: #fff;
   padding: 20px;
   line-height: 1.4;
@@ -6844,6 +6844,7 @@ textarea.form-control {
   width: 100%;
   white-space: normal;
   display: none;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 .info-bank-active {
   display: block;
