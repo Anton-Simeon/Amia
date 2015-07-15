@@ -4094,7 +4094,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
     display: block !important;
    }
      .user-active.navbar-toggle-content.active .log-in {
-    display: inline !important;
+    display: inline-block !important;
   }
 
 
