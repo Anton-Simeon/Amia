@@ -7675,6 +7675,22 @@ textarea.form-control {
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
   }
 
+  .stepBlock3 .TotalSumCart > div {
+    display: block;
+  }
+  .stepBlock3 .TotalSumCart > div:first-child {
+    height: auto;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .stepBlock3 .TotalSumCart {
+    display: block;
+    padding: 10px;
+  }
+  .stepBlock1 .ItemPrice, .stepBlock1 .ItemTotalPrice, .stepBlock1 .ItemDiscount {
+    text-align: center;
+  }
+
 
 }
 @media (max-width: 710px){
