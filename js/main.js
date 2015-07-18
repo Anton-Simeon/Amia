@@ -537,21 +537,74 @@ jQuery(function ($) {
 		//endregion
 
 		//region ===== itemListSlider =====
-		$('.slider-wrap').jcarousel();
 
-		$('.jcarousel-prev').jcarouselControl({
+		$('.slider-wrap:not(.mobile-owl)').jcarousel();
+		$('.slider-wrap:not(.mobile-owl) .jcarousel-prev').jcarouselControl({
 				target: '-=1'
 		});
 
-		$('.jcarousel-next').jcarouselControl({
+		$('.slider-wrap:not(.mobile-owl) .jcarousel-next').jcarouselControl({
 				target: '+=1'
 		});
 
-		$('.middle-content .top-list-item').hover(function () {
+
+
+
+
+		var bodyWidthVar = $('body').width();
+		if (bodyWidthVar > 1030){
+			$('.slider-wrap.mobile-owl').jcarousel();
+			$('.slider-wrap.mobile-owl .jcarousel-prev').jcarouselControl({
+					target: '-=1'
+			});
+
+			$('.slider-wrap.mobile-owl .jcarousel-next').jcarouselControl({
+					target: '+=1'
+			});
+
+			$('.middle-content .top-list-item').hover(function () {
 				$(this).find('.slider-wrap').jcarousel('reload', {
 						vertical: true
 				});
+			});
+
+		}else {
+			$(".mobile-owl .carouselv").owlCarousel({
+
+				navigation : true, // показывать кнопки next и prev
+				pagination : false,
+
+				slideSpeed : 300,
+				paginationSpeed : 400,
+
+				items : 4,
+				itemsDesktop : [991,5],
+				itemsDesktopSmall : [850,4],
+				itemsTablet : false,
+				itemsMobile : false
+
+			});
+		}
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+		$('.top-list-item-style .one-slide').hover(function () {
+			$(this).find('.slider-wrap').jcarousel('reload', {
+					vertical: true
+			});
 		});
+
 
 		$('.carouselv a').hover(function ( e ) {
 				e.preventDefault();
@@ -1076,7 +1129,6 @@ jQuery(function ($) {
   		$('.top-list-item-style-horizontal').removeClass('hide-arrow-left');
   	});
 
-  	$('.slide-upload-js').removeClass('slide-upload-js');
 
   	$('.coment-btn-wrap .buttonGray').click(function(){
   		$(this).hide();
