@@ -3500,9 +3500,7 @@ a, button {
   width: 100%;
   height: 100%;
 }
-.top-selection .top-block-selection li > .wrap:hover h2, .top-selection .middle-block-selection li > .wrap:hover h2, .top-selection .bottom-block-selection li > .wrap:hover h2 {
-  color: #000;
-}
+
 .top-selection .top-block-selection li > .wrap h2, .top-selection .middle-block-selection li > .wrap h2, .top-selection .bottom-block-selection li > .wrap h2 {
   padding-top: 110px;
   font: 800 28px "Open Sans", sans-serif;
@@ -3535,9 +3533,7 @@ a, button {
 .top-selection .middle-block-selection .flower-power > .wrap {
   background: none;
 }
-.top-selection .middle-block-selection .flower-power:hover {
-  background-position: 0 -288px;
-}
+
 @media (min-width: 768px) and (max-width: 991px) {
 
   .top-selection .middle-block-selection .flower-power {
@@ -3551,6 +3547,7 @@ a, button {
   height: 288px;
   text-align: center;
   background: url("../../images/right-block-img.jpg") no-repeat;
+  background-size: 100% auto;
 }
 @media (min-width: 768px) and (max-width: 991px) {
 
@@ -3631,10 +3628,7 @@ a, button {
   -o-transition: none;
   transition: none;
 }
-.top-selection .bottom-block-selection .swiss .wrap-swiss:hover {
-  background-position: 0 -108px;
-  color: #000;
-}
+
 .top-selection .bottom-block-selection .swiss .wrap-swiss h2 {
   padding: 27px 0 15px;
   font: 800 24px "Open Sans", sans-serif;
@@ -3645,35 +3639,118 @@ a, button {
   height: 100%;
   background: rgba(0, 0, 0, 0.6);
 }
-.top-selection .bottom-block-selection .swiss .wrap-swiss .swiss-bg:hover {
-  background: none;
-}
+
 .top-selection .bottom-block-selection .leather {
   display: block;
   float: right;
   width: 70%;
   background: url("../../images/leather-img.jpg") no-repeat;
+  background-size: 100% auto;
 }
-.top-selection .bottom-block-selection .leather:hover {
-  background-position: 0 -288px;
-}
+
 .top-selection .modern-home {
   background: url("../../images/modern-home.jpg") no-repeat;
+  background-size: 100% auto;
 }
-.top-selection .modern-home:hover {
-  background-position: 0 -288px;
-}
+
 .top-selection .bless {
   background: url("../../images/bless-img.jpg") no-repeat;
+  background-size: 100% auto;
 }
-.top-selection .bless:hover {
-  background-position: 0 -288px;
-}
+
 .top-selection .roundup {
   background: url("../../images/roundup.jpg") no-repeat;
+  background-size: 100% auto;
 }
-.top-selection .roundup:hover {
-  background-position: 0 -288px;
+
+@media (min-width: 1033px){
+	.top-selection .bottom-block-selection .leather:hover {
+	  background-position: 0 -292px;
+	}
+	.top-selection .modern-home:hover {
+	  background-position: 0 -289px;
+	}
+	.top-selection .bless:hover {
+	  background-position: 0 -289px;
+	}
+	.top-selection .roundup:hover {
+	  background-position: 0 -289px;
+	}
+	.top-selection .middle-block-selection .flower-power:hover {
+  		background-position: 0 -288px;
+	}
+	.top-selection .bottom-block-selection .swiss .wrap-swiss .swiss-bg:hover {
+	  background: none;
+	}
+	.top-selection .bottom-block-selection .swiss .wrap-swiss:hover {
+	  background-position: 0 -108px;
+	  color: #000;
+	}
+	.top-selection .top-block-selection li > .wrap:hover h2, .top-selection .middle-block-selection li > .wrap:hover h2, .top-selection .bottom-block-selection li > .wrap:hover h2 {
+  		color: #000;
+	}
+}
+@media (max-width: 1032px){
+	.top-selection .bottom-block-selection .leather, .top-selection .roundup, .top-selection .bless, .top-selection .modern-home {
+		background-size: auto 200%;
+	}
+	.top-selection .middle-block-selection .right-middle-block {
+		background-size: cover;
+	}
+}
+
+@media (max-width: 767px){
+	.container .top-selection .top-block-selection li, .container .top-selection .middle-block-selection li, .container .top-selection .bottom-block-selection li {
+		height: auto;
+		background-size: 100% auto;
+	}
+	.container .top-selection .top-block-selection li > .wrap, .container .top-selection .middle-block-selection li > .wrap, .container .top-selection .bottom-block-selection li > .wrap {
+		width: auto;
+	}
+	.top-selection .top-block-selection li > .wrap h2, .top-selection .middle-block-selection li > .wrap h2, .top-selection .bottom-block-selection li > .wrap h2 {
+		padding: 15px 10px;
+	}
+	.top-selection .middle-block-selection {
+		margin-top: 0;
+	}
+	.container .top-selection .middle-block-selection .flower-power {
+		width: auto;
+	}
+	.container  .top-selection .middle-block-selection .right-middle-block {
+		width: auto;
+		padding-bottom: 20px;
+	}
+	.container  .top-selection .right-middle-block > .wrap {
+		background: none;
+	}
+	.top-selection .bottom-block-selection {
+		margin-top: 0;
+		margin-bottom: 15px;
+	}
+	.container .top-selection .bottom-block-selection .swiss {
+		width: auto;
+	}
+	.top-selection .bottom-block-selection .swiss .secure-wrap {
+		height: auto;
+		padding: 15px 10px;
+		background-size: cover;
+	}
+	.top-selection .bottom-block-selection .swiss .wrap-swiss {
+		background-size: 100% auto;
+		height: auto;	
+	}
+	.top-selection .bottom-block-selection .swiss .wrap-swiss h2 {
+		padding: 15px 10px;
+	}
+	.container .top-selection .bottom-block-selection .leather {
+		width: auto;
+	}
+	.top-selection-wrapper {
+		margin-top: 0;
+	}
+	.top-selection h2 {
+		padding: 15px 10px;
+	}
 }
 
 /*********************************************************************************************************************/
@@ -4520,9 +4597,6 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
     font: 300 24px "Open Sans", sans-serif;
   }
 
-  .middle-block-selection .right-middle-block > .wrap:hover {
-    background: rgba(3, 2, 23, 0.85);
-  }
 
   .middle-block-selection .right-middle-block > .wrap:hover h2 {
     color: #fff;
