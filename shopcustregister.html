@@ -1,0 +1,1368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Amia-catalog</title>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,800italic,700italic,600italic,400italic,300italic,800,700,600,300&subset=latin,cyrillic,latin-ext,vietnamese,greek,greek-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="styles/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/css/ion.rangeSlider.css"/>
+    <link rel="stylesheet" href="styles/css/ion.rangeSlider.skinModern.css"/>
+    <link rel="stylesheet" href="styles/css/jquery.rating.css"/>
+    <link rel="stylesheet" href="styles/css/owl.carousel.css"/>
+    <link rel="stylesheet" href="styles/css/owl.theme.css"/>
+    <link rel="stylesheet" href="styles/css/jsCarousel-2.0.0.css"/>
+    <link rel="stylesheet" href="styles/css/jcarousel.css"/>
+    <link rel="stylesheet" href="styles/css/style.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- HEADER -->
+<header class="header" id="header">
+    <!-- BOOTSTRAP MENU -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h1>
+                    <a class="logo" href="#">
+                        <img src="images/logo.png" alt="Amia" width="104" height="36" />
+                    </a>
+                </h1>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="main-nav nav navbar-nav">
+                    <li class="active sale"><a href="#">Распродажа</a></li>
+                    <li class="catalog"><a href="#">Каталог</a></li>
+                    <!--<li class="how-pay"><a href="#">Как купить?</a></li>-->
+                    <li class="delivery"><a href="#">Оплата и доставка</a></li>
+                    <li class="contacts"><a href="#">Контакты</a></li>
+                </ul>
+                <span class="glyphicon glyphicon-align-justify"></span>
+                <nav class="sub-panel">
+                    <div class="basket-wrap">
+                        <a href="#" class="basket sprite">1 ТОВАР</a>
+                        <div class="open-basket">
+                            <div class="basket-item-wrap">
+                                <div class="basket-item-body">
+                                    <div class="img-wrap">
+                                        <img src="images/basket-shoes.jpg" alt="shoes" />
+                                    </div>
+                                    <div class="basket-item-info">
+                                        <a href="#">
+                                            <ul>
+                                                <li>1x</li>
+                                                <li>New balance</li>
+                                                <li>313751-60</li>
+                                                <li class="name">Кроссовки для взрослых мужчин и женщин</li>
+                                                <li class="price">&euro; 75</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </div>
+                                <div class="basket-open-footer">
+                                    <span class="price">Итого: <span>&euro;75</span></span>
+                                    <button type="button" class="btn btn-default order">Заказать</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="log-in">
+                        <a href="#" class="user-info">Моя информация</a>
+                        <a href="#">GDEYCH@AMIA.LV</a>
+                    </div>
+                    <a href="" class="sprite link-login"></a>
+                    <ul class="language-list list-inline">
+                        <li>
+                            <a href="#">LV</a>
+                        </li>
+                        <li>
+                            <a href="#" class="active">RU</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!--/.nav-collapse -->
+        </div>
+    </nav>
+    <!-- END BOOTSTRAP MENU -->
+    <!-- SUB HEADER -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="tel-wrap">
+                <a class="header-tel sprite col-xs-3 col-sm-3 col-md-2" href="tel:+37166116723">+ 371 66 11 67 23</a>
+            </div>
+            <div class="form-group col-xs-12 col-sm-5 col-sm-offset-1 col-md-8">
+                <select name="search" id="select-search" class="form-control">
+                    <option value="women's-clothing">Search in all</option>
+                    <option value="women's-clothing">Women's clothing</option>
+                    <option value="men's-clothing">Men's clothing</option>
+                    <option value="baby-toys">Baby & toys</option>
+                    <option value="health-beauty">Health & beauty</option>
+                    <option value="home-kitchen">Home kitchen</option>
+                    <option value="sporting-goods">Sporting goods</option>
+                    <option value="tools & garden">Tools & garden</option>
+                </select>
+                <div class="search-wrap">
+                    <form action="#">
+                        <input type="text" class="form-control" placeholder="Найти..">
+                        <button type="submit" class="submit sprite"></button>
+                    </form>
+                </div>
+            </div>
+            <div class="work-time col-xs-4 col-sm-4 col-md-2">
+                <span>Время работы</span>
+                <span class="time">с 9:00 до 17:30 <span>Пн-Пт</span></span>
+            </div>
+        </div>
+    </div>
+    <!-- END SUB HEADER -->
+    <div class="after-header">
+        <div class="container">
+            <form class="call-me">
+                <div>
+                    <input id="call" class="form-control" type="text" name="call-me">
+                    <input id="call-hidden" class="form-control" type="hidden" value="">
+                    <div class="position-key-wrap">
+                        <div class="position-key position-key1"></div>
+                        <div class="position-key position-key2"></div>
+                        <div class="position-key position-key3"></div>
+                        <div class="position-key position-key4"></div>
+                        <div class="position-key position-key5"></div>
+                        <div class="position-key position-key6"></div>
+                        <div class="position-key position-key7"></div>
+                        <div class="position-key position-key8"></div>
+                    </div>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-orange">ПОЗВОНИТЕ МНЕ</button>
+                </div>
+            </form>
+            <ul class="soc-list list-inline col-md-2">
+                <li><a class="sprite facebook" href="#"></a></li>
+                <li><a class="sprite draugiem" href="#"></a></li>
+                <li><a class="sprite google" href="#"></a></li>
+            </ul>
+            <ul class="advantages list-inline col-md-7 col-xs-12">
+                <li class="guarantee col-xs-4"><span>14 day</span> return guarantee</li>
+                <li class="cash-payment col-xs-4"><span>Payment:</span>cash/credit
+                    card/bank</li>
+                <li class="delivery col-xs-4"><span>Delivery:</span> courier/self
+                    -pickup</li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- END HEADER -->
+<!-- CONTENT -->
+<div class="content-wrap">
+    <div class="container">
+        <div class="breadcrumb-wrap">
+            <span>Вы здесь:</span>
+            <ol class="breadcrumb">
+                <li><a href="#">Главная страница</a></li>
+                <li><a href="#">Панель пользователя</a></li>
+                <li class="active">Регистрация Покупателя</li>
+            </ol>
+        </div>
+
+        <section class="content-block">
+            <h1>РЕГИСТРАЦИЯ ПОКУПАТЕЛЯ</h1>
+            <b class="noproductmessage">Введите пожалуйста ваши данные</b>
+            <form class="validate row register-block">
+                <div class="col-sm-4">
+                    <h3>МОЯ ИНФОРМАЦИЯ</h3>
+                    <div class="form-group">
+                        <label class="control-label">Имя:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Фамилия:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Я:&nbsp;*</label>
+                        <span class="customRadio">
+                            <input type="radio" value="Woman" id="Woman" name="gender">
+                            <label class="label_for_radio" for="Woman"><i class="icon-radio"></i>Женщина</label>
+                        </span>
+                        <span class="customRadio">
+                            <input type="radio" value="Man" id="Man" name="gender">
+                            <label class="label_for_radio" for="Man"><i class="icon-radio"></i>Мужчина</label>
+                        </span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label">E-mail:&nbsp;*</label>
+                        <input type="email" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Дата рождения:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Телефон:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="CorporateCustomer" name="CorporateCustomer">
+                        <label class="control-label" for="CorporateCustomer">Корпоративный клиент</label>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>АДРЕС</h3>
+                    <div class="form-group">
+                        <label class="control-label">Город:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Адрес:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Адрес 2</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Страна</label>
+                        <div class="CountryInput form-control">Латвия</div>
+                        <div style="display: none;" id="CountryList">
+                            <ul>
+                                <li id="LV">Латвия</li>
+                            </ul>
+                        </div>
+                        <input type="hidden" value="Латвия" id="strcountry" name="strcountry">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Почтовый индекс:&nbsp;*</label>
+                        <input type="text" value="" class="form-control">
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <h3>МОЙ ПАРОЛЬ</h3>
+                    <div class="form-group">
+                        <label class="control-label">Пароль:&nbsp;*</label>
+                        <input type="password" value="" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Повторите Пароль:&nbsp;*</label>
+                        <input type="password" value="" class="form-control">
+                    </div>
+                    <button class="buttonGray" type="submit">Регистрация</button>
+                </div>
+            </form> 
+
+        </section>
+
+        <section class="top-selection wrap-slider-horizontal-selection col-xs-12">
+            <div class="recent-slider-wrap">
+                <h2>Недавно просмотренные товары</h2>
+                <div class="wrap-slider-horizontal">
+	                <div id="recent-slider" class="recent-slider top-list-item-style slide-upload-js top-list-item-style-horizontal">
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+						<div class="one-slide">
+						    <div class="item-wrap">
+						        <div class="slider-wrap" data-jcarousel="true" style="">
+						            <ul class="carouselv" style="left: 0px; top: -25px;">
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-table.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/baby-book.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/chico-baby.jpg" alt="">
+						                    </a>
+						                </li>
+						                <li>
+						                    <a href="#">
+						                        <img src="images/shoes.jpg" alt="">
+						                    </a>
+						                </li>
+						            </ul>
+
+						            <a href="#" class="jcarousel-prev" data-jcarouselcontrol="true">Prev</a>
+						            <a href="#" class="jcarousel-next" data-jcarouselcontrol="true">Next</a>
+						        </div>
+						        <div class="item-info-wrap">
+						            <a href="#"></a>
+						            <h3>“VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS “VANS“ SNEAKERS2</h3>
+						            <div class="img-wrap">
+						                <img alt="baby bottle" src="images/baby-bottle.jpg">
+						            </div>
+						            <ul class="rating-block">
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li class="active"></li>
+						                <li></li>
+						                <li></li>
+						            </ul>
+						            <ul class="price-list list-inline">
+						                <li class="new-price">
+						                    € 37.08
+						                </li>
+						                <li class="old-price">
+						                    € 58.99
+						                </li>
+						            </ul>
+						            <a class="add-card" href="##">Add to card</a>
+						        </div>
+						        <div class="right-block-info">
+						            <h3>
+						               “VANS“ SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                    SNEAKERS
+						                SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS SNEAKERS
+						                SNEAKERS</h3>
+						            <ul class="right-block-list">
+						                <li>Модель: <span>CLATRONIC MV 781</span></li>
+						                <li>Объем: <span>20л</span></li>
+						                <li>Габариты: <span>44х22х11</span></li>
+						                <li>Производитель: <span>Страна</span></li>
+						                <li>
+						                    <div class="more-information">
+						                        <span>Размеры в наличии:</span>
+						                        <ul class="list-inline">
+						                            <li><a href="#">7</a></li>
+						                            <li><a href="#">8</a></li>
+						                            <li><a href="#">9</a></li>
+						                            <li><a href="#">10</a></li>
+						                            <li><a href="#">11</a></li>
+						                            <li><a href="#">12</a></li>
+						                        </ul>
+						                    </div>
+						                </li>
+						            </ul>
+						        </div>
+						    </div>
+						</div>
+	                </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="button-category navbar-default">
+            <div class="btn-category">
+                категории
+                <div class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </div>
+            </div>
+        </div>
+        <nav class="content-menu">
+            <div class="menu-wrapper">
+                <ul>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle baby1 sprite" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Bērniem</span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite health-beauty" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Skaistumam un veselībai</span><span
+                                class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Women's sport clothing <span>(418)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Clothing for girls <span>(438)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite men-clothing" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Apģērbs vīriešiem</span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite women-clothing" data-toggle="dropdown" aria-expanded="false"><span class="text-wrap">Apģērbs sievietēm</span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Women's sport clothing <span>(418)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Clothing for girls <span>(438)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite home-kitchen" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Mājai un virtuvei</span><span
+                                class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite sporting-goods" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Sportam un atpūtai</span><span
+                                class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Women's sport clothing <span>(418)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Clothing for girls <span>(438)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite tools-garden" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Dārzam</span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Women's sport clothing <span>(418)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Clothing for girls <span>(438)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <button type="button" class="btn dropdown-toggle sprite toys1" data-toggle="dropdown"
+                                aria-expanded="false"><span class="text-wrap">Rotaļlietas un spēles</span><span
+                                class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu list-inline" role="menu">
+                            <li class="view-category-item">
+                                <a href="#">view category</a>
+                            </li>
+                            <li>
+                                <h3>Top Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Accessories and jewelry <span>(2059)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pants and jeans <span>(302)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Tops <span>(234)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shoes <span>(826)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Coats and jackets <span>(324)</span></a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="other-categories">
+                                <h3>Other Categories</h3>
+                                <ul>
+                                    <li>
+                                        <a href="#">Sweatshirts, sweatshirts and sweaters <span>(151)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Dresses <span>(50)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Pregnant women <span>(89)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Socks and tights <span>(20)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Shorts and skirts <span>(19)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Trousers and Leggings <span>(49)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Swimsuits <span>(54)</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Underwear and Nightwear <span>(230)</span></a>
+
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="btn-group">
+                        <a href="" class="btn dropdown-toggle sprite sales">
+                            <span>Sales</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- END TOP CONTENT -->
+    </div>
+</div>
+<section class="footer">
+    <div class="container">
+        <div class="left-box сol-xs-12 col-sm-12 col-sm-5">
+            <div class="info-list list">
+                <h2>Информация</h2>
+                <ul>
+                    <li><a href="#">О Нас</a></li>
+                    <li><a href="#">Вопросы и ответы</a></li>
+                </ul>
+            </div>
+            <div class="service-list list">
+                <h2>Сервис</h2>
+                <ul>
+                    <!--<li><a href="#">Как купить?</a></li>-->
+                    <li><a href="#">Оплата и доставка</a></li>
+                    <li><a href="#">Гарантии и возврат</a></li>
+                    <li><a href="#">Ответственность сторон</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="center-box col-xs-12 col-sm-6 col-sm-3">
+            <h2>Безопасность</h2>
+            <ul class="pay-list list-inline">
+                <li><div class="maestro"></div></li>
+                <li><div class="master-card"></div></li>
+                <li><div class="visa"></div></li>
+                <li><div class="verified"></div></li>
+                <li><div class="master-source"></div></li>
+            </ul>
+        </div>
+        <div class="right-box col-xs-12 col-sm-6 col-sm-4">
+            <a href="tel:66116723" class="footer-tel">66116723</a>
+            <span class="copyright">© 2014. All rights reserved. <a href="#">AMIA.LV</a></span>
+            <address>SIA Interbridge, Maskavasiela 240, <span>Riga, LV-1063 Latvia</span></address>
+        </div>
+    </div>
+</section>
+<div class="modal-log">
+    <div class="registration-block">
+        <h3>Новые клиенты</h3>
+        <a href="#">регистрация</a>
+    </div>
+    <div class="sign-in-block">
+        <h3>Зарегистрированные клиенты</h3>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">E-mail:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Пароль:</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <a href="#" class="forgot">Забыли пароль?</a>
+            <button type="submit" class="btn btn-default">Логин</button>
+        </form>
+    </div>
+    <span class="glyphicon glyphicon-remove"></span>
+</div>
+<div class="onload-modal">
+    <h4>Lorem ipsum dolor sit amet</h4>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis architecto adipisci soluta, consequuntur, rem vero perspiciatis, non praesentium consequatur laborum ex nostrum, sapiente mollitia repellendus recusandae voluptates repudiandae ipsa a.</p>
+    <a class="ok" href="#">Ок</a>
+</div>
+<div class="overlay"></div>
+<div class="basket-overlay"></div>
+
+
+
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/lib/bootstrap.min.js"></script>
+<script src="js/lib/jquery.rating.js"></script>
+<script src="js/lib/owl.carousel.min.js"></script>
+<script src="js/lib/ion.rangeSlider.js"></script>
+<script src="js/lib/jquery.jcarousel.min.js"></script>
+<script src="js/lib/jquery.jcarousel-control.min.js"></script>
+<script src="js/baron.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+
+<script src="js/main.js"></script>
+
+
+
+
+
+
+</body>
+</html>

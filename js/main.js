@@ -1130,9 +1130,16 @@ jQuery(function ($) {
   	});
 
 
-  	$('.coment-btn-wrap .buttonGray').click(function(){
+  	$('.coment-btn-wrap .buttonGray:first-child').click(function(){
   		$(this).hide();
   		$('.writeYourReview').show();
+  	});
+
+  	$('.coment-btn-wrap .buttonGray:nth-child(2)').click(function(){
+  		$(this).hide();
+  		$('.column-js').children().addClass('col-sm-6').removeClass('col-sm-12');
+  		$('.say-friend').show();
+  		
   	});
 
 
@@ -1236,6 +1243,21 @@ jQuery(function ($) {
 	})
 
 	/* END product */
+
+	 $('.CountryInput.form-control').click(function () {
+        $('#CountryList').slideToggle('fast');
+        $(this).toggleClass('active');
+    });
+
+
+	$('#CountryList li').click(function () {
+        var chooseCountry = $(this).text();
+		var chooseId = $(this).prop("id");
+        $('.CountryRow .CountryInput').text(chooseCountry);
+		//$('.CountryRow input').val(chooseId);
+		$('#CountryList').slideToggle('fast');
+        $(this).toggleClass('active');
+    });
 
 });
 
