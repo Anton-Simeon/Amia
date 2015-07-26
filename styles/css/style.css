@@ -7594,7 +7594,7 @@ textarea.form-control {
     position: absolute;
     width: 287px;
     right: 5px;
-    top: 25px;
+    top: 9px;
     z-index: 900;
     border: 1px solid #ff8900;
     -moz-box-shadow: rgba(255, 101, 2, 0.46) -2px -2px 5px, rgba(255, 101, 2, 0.46) 2px 2px 5px;
@@ -7603,6 +7603,9 @@ textarea.form-control {
     -moz-border-radius: 5px;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+  }
+  .top-list-item-style-vertical .one-slide:hover .item-wrap {
+    top: 25px;
   }
   .top-list-item-style-horizontal .one-slide:hover .item-wrap {
     margin-left: -65px;
