@@ -7207,6 +7207,7 @@ textarea.form-control {
 	height: 330px;
 	text-align: center;
 	width: 100%;
+  overflow: visible;
 }
 
 .top-list-item-style-vertical .one-slide {
