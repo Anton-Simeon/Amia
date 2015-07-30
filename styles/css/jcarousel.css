@@ -33,18 +33,62 @@
 
 .slider-wrap .jcarousel-prev {
     top: 0;
-    background: url("../../images/item-slide-up.png");
+    -webkit-transition: 0s ease-out;
+    -moz-transition: 0s ease-out;
+    -o-transition: 0s ease-out;
+    transition: 0s ease-out;
+}
+.slider-wrap .jcarousel-prev:after {
+    content: " ";
+    display: block;
+    width: 70px;
+    height: 12px;
+    background: url("../../images/sprite.png");
+    background-position: -24px -57px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0s ease-out;
+    -moz-transition: 0s ease-out;
+    -o-transition: 0s ease-out;
+    transition: 0s ease-out;
 }
 
 .slider-wrap .jcarousel-next {
     bottom: 0;
-    background: url("../../images/item-slide-bottom.png");
+    -webkit-transition: 0s ease-out;
+    -moz-transition: 0s ease-out;
+    -o-transition: 0s ease-out;
+    transition: 0s ease-out;
 }
+
+
+.slider-wrap .jcarousel-next:after {
+    content: " ";
+    display: block;
+    width: 70px;
+    height: 12px;
+    background: url("../../images/sprite.png");
+    background-position: -280px -52px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transition: 0s ease-out;
+    -moz-transition: 0s ease-out;
+    -o-transition: 0s ease-out;
+    transition: 0s ease-out;
+}
+
+
 .slider-wrap .jcarousel-prev:hover {
     bottom: 0;
-    background: url("../../images/item-slide-up-hover.png");
+}
+.slider-wrap .jcarousel-prev:hover:after {
+    background-position: -280px -37px;
 }
 .slider-wrap .jcarousel-next:hover {
     bottom: 0;
-    background: url("../../images/item-slide-bottom-hover.png");
+}
+.slider-wrap .jcarousel-next:hover:after {
+    background-position: -352px -37px;
 }
