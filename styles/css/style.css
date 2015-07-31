@@ -6421,6 +6421,9 @@ label.error {
 	max-width:95px;
 	max-height:50px;
 }
+.content-scroll > div > div:first-child {
+  line-height: 55px;
+}
 .select_products_img {
 	border:0px solid blue; 
 	margin: 3px 0.62%;
