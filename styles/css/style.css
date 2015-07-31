@@ -8200,7 +8200,7 @@ textarea.form-control {
 }
 
 @media (max-width: 460px){
-	.select_products_img, .colorsizeimgselcolor {
+	.select_products_img, .colorsizeimgselcolor, .colorsizeimgnosel {
 		width: 23.75%;
 	}
 }
@@ -8248,7 +8248,7 @@ textarea.form-control {
   }
 }
 @media (max-width: 390px){
-	.select_products_img, .colorsizeimgselcolor {
+	.select_products_img, .colorsizeimgselcolor, .colorsizeimgnosel {
 		width: 31.8%;
 	}
 }
