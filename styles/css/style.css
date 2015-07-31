@@ -7710,7 +7710,7 @@ textarea.form-control {
 }
 
 @media (max-width: 1149px){
-  .top-list-item-style-vertical .one-slide:hover .item-info-wrap {
+  .top-list-item-style .one-slide:hover .item-info-wrap {
     margin-left: 0px;
   }
 }
