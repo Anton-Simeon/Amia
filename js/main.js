@@ -773,7 +773,7 @@ jQuery(function ($) {
 
 	function positionCursor(){
 
-		$('#call').val('+371            ');
+		$('#call').val('+371-  -   -   ');
 
 		var valLenghtInput, keyNumber; 
 
@@ -844,16 +844,12 @@ jQuery(function ($) {
 				setCaretToPos(document.getElementById("call"), 8);
 				$('.position-key3').css('background', '#00f');
 			}
-		  	if(valLenghtInput > 9 && valLenghtInput < 12){
-				setCaretToPos(document.getElementById("call"), 11);	
-				$('.position-key5').css('background', '#00f');
+		  	if(valLenghtInput > 10 && valLenghtInput < 13){
+				setCaretToPos(document.getElementById("call"), 12);	
+				$('.position-key6').css('background', '#00f');
 			}
-		  	if(valLenghtInput > 12 && valLenghtInput < 15){
+		  	if(valLenghtInput > 14){
 				setCaretToPos(document.getElementById("call"), 14);	
-				$('.position-key7').css('background', '#00f');
-			}
-		  	if(valLenghtInput > 15){
-				setCaretToPos(document.getElementById("call"), 15);	
 				$('.position-key8').css('background', '#00f');
 			}
 
@@ -876,17 +872,17 @@ jQuery(function ($) {
 				$('.position-key4').css('background', '#00f');
 			}
 	
-			if(valLenghtInput == 11){
+			if(valLenghtInput == 10){
 				$('.position-key5').css('background', '#00f');
 			}
 			if(valLenghtInput == 12){
 				$('.position-key6').css('background', '#00f');
 			}
 
-			if(valLenghtInput == 14){
+			if(valLenghtInput == 13){
 				$('.position-key7').css('background', '#00f');
 			}
-			if(valLenghtInput == 15){
+			if(valLenghtInput == 14){
 				$('.position-key8').css('background', '#00f');
 			}
 		}
@@ -895,10 +891,13 @@ jQuery(function ($) {
 		function funKeydown(){
 			cleanForm();
 			$('.position-key').css('background', '#f00');
-			keyStatic();
+			setTimeout(keyStatic(), 100);
+
 		}
 
 		var keyVal = true;
+
+		var key;
 
 		var a = 1;
 
@@ -911,27 +910,31 @@ jQuery(function ($) {
 
 			if(keyVal){
 
-		  	
-		            var key = e.charCode || e.keyCode || 0;
+					
+		  			
+		            key = e.charCode || e.keyCode || 0;
+
 				
-					setTimeout(funKeydown, 100);
+					funKeydown();
 
 				  	if (key == 39) {
-		        		if(valLenghtInput == 6 || valLenghtInput == 9 || valLenghtInput == 12){
+
+		        		if(valLenghtInput == 6 || valLenghtInput == 10 || valLenghtInput == 14){
 		        			setCaretToPos(document.getElementById("call"), valLenghtInput + 1);
 		        		}else if(valLenghtInput > 14){
 		        			return false
 		        		}
 		    		}
 		    		if (key == 37) {
-		        		if(valLenghtInput == 8 || valLenghtInput == 11 || valLenghtInput == 14){
+		        		if(valLenghtInput == 8 || valLenghtInput == 12){
 		        			setCaretToPos(document.getElementById("call"), valLenghtInput - 1);
 		        		}else if(valLenghtInput < 6){
 		        			return false
 		        		}
 		    		}
 		    		if (key == 8) {
-		        		if(valLenghtInput == 8 || valLenghtInput == 11 || valLenghtInput == 14){
+
+		        		if(valLenghtInput == 8 || valLenghtInput == 12){
 
 		        			var valKey = $(this).val();
 			    			cleanForm();
@@ -940,7 +943,7 @@ jQuery(function ($) {
 			    			valKeyStart = valKey.slice(0, valLenghtInput - 2);
 
 			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
-			    			$(this).val(valKeyStart + '  ' + valKeyEnd);
+			    			$(this).val(valKeyStart + ' -' + valKeyEnd);
 
 			    			setCaretToPos(document.getElementById("call"), valLenghtInput - 2);
 
@@ -974,7 +977,7 @@ jQuery(function ($) {
 		    		}
 
 		    		if( (key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
-		    			if(valLenghtInput == 6 || valLenghtInput == 9 || valLenghtInput == 12){
+		    			if(valLenghtInput == 6 || valLenghtInput == 10){
 
 		    				if(key == 48 || key == 96){
 		    					keyNumber = 0;
@@ -1020,7 +1023,7 @@ jQuery(function ($) {
 			    			keyVal = false;
 
 			    			return false
-		    			}else if(valLenghtInput < 16){
+		    			}else if(valLenghtInput < 15){
 		    				var valKey = $(this).val();
 			    			cleanForm();
 			    			valKey2 = valKey.length;
@@ -1035,6 +1038,7 @@ jQuery(function ($) {
 		    			}else {
 		    				return false
 		    			}
+
 	    					
 		    		}else {
 		    			 return (
@@ -1049,7 +1053,6 @@ jQuery(function ($) {
 	    	}else {
 	    		return false
 	    	}
-
 
 
 

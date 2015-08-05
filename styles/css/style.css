@@ -4040,7 +4040,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
 .position-key-wrap {
   position: absolute;
   bottom: 2px;
-  left: 43px;
+  left: 45px;
   width: 100px;
 }
 .position-key {
@@ -4050,8 +4050,8 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   width: 7px;
   margin-right: 1px;
 }
-.position-key:nth-child(2n + 2){
-  margin-right: 7.4px;
+.position-key:nth-child(2), .position-key:nth-child(5){
+  margin-right: 8.4px;
 }
 .top-block-selection a, .middle-block-selection a, .bottom-block-selection a, .top-block-selection a:hover, .middle-block-selection a:hover, .bottom-block-selection a:hover {
   color: #fff;
@@ -5204,10 +5204,10 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   color: #ff4400;
   height: 24px;
   padding: 4px;
-  font-weight: bold;
+  font-weight: 900;
   word-spacing: 4.1px;
-  font-size: 13px;
-  letter-spacing: 0.1px;
+  font-size: 12px;
+  letter-spacing: 1.5px;
   background: linear-gradient(#feedc1 -14.8px, rgba(255, 252, 245, 0.8) 99%);
 }
 .call-me .form-control:focus {
