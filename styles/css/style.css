@@ -5209,6 +5209,7 @@ body.order-step1 .content-wrap > .container .breadcrumb-wrap .breadcrumb {
   font-size: 12px;
   letter-spacing: 1.5px;
   background: linear-gradient(#feedc1 -14.8px, rgba(255, 252, 245, 0.8) 99%);
+   
 }
 .call-me .form-control:focus {
   box-shadow: none;
@@ -6181,11 +6182,14 @@ label.error {
   position: relative;
 }
 #PaymentGroup label#paymentmethod_selected-error {
-  position: absolute;
-  top: 64px;
-  left: 300px;
-  width: 300px;
-  z-index: 10;
+ position: absolute;
+ top: 0px;
+ left: 150px;
+ width: 300px;
+ z-index: 10;
+ font-size: 14px;
+ font-weight: 700;
+ margin-top: 0px;
 }
 .checkDekiveryGroup.customRadio-wr .customRadio {
   min-height: 34px;
