@@ -857,6 +857,45 @@ jQuery(function ($) {
 
 		});
 
+
+		$("#call").bind('copy', function() {
+		    return false
+		}); 
+		$("#call").bind('paste', function() {
+		    return false
+		}); 
+		$("#call").bind('cut', function() {
+		   return false
+		});
+	
+
+
+		var isMouseDown = false;
+		var isMouseDown2 = true;
+		$('#call').mousedown(function(){
+		    isMouseDown = true;
+		   
+
+		});
+		 
+		$('#call').mouseup(function(){
+		    isMouseDown = false;
+		    isMouseDown2 = true;
+		});
+
+		 
+		$('#call').mousemove(function(){
+		    if (isMouseDown){
+		        console.log('Отпустите мышь!');
+		        isMouseDown2 = false;
+		      	
+
+		        isMouseDown = false;
+		    }
+		});
+
+
+
 		function keyStatic(){
 			if(valLenghtInput == 5){
 				$('.position-key1').css('background', '#00f');
@@ -903,372 +942,376 @@ jQuery(function ($) {
 
 
 		$('#call').keydown(function(e) {
+
+			console.log(isMouseDown2);
+			
+			if(isMouseDown2){
 			
 			
-			
-			
 
-			if(keyVal){
+				if(keyVal){
 
-					
-		  			
-		            key = e.charCode || e.keyCode || 0;
+						
+			  			
+			            key = e.charCode || e.keyCode || 0;
 
 			
 
-					funKeydown();
+						funKeydown();
 
-				  	if (key == 39) {
+					  	if (key == 39) {
 
-		        		if(valLenghtInput == 6 || valLenghtInput == 10 || valLenghtInput == 14){
-		        			setCaretToPos(document.getElementById("call"), valLenghtInput + 1);
-		        		}else if(valLenghtInput > 14){
-		        			return false
-		        		}
-		    		}
-		    		if (key == 37) {
-		        		if(valLenghtInput == 8 || valLenghtInput == 12){
-		        			setCaretToPos(document.getElementById("call"), valLenghtInput - 1);
-		        		}else if(valLenghtInput < 6){
-		        			return false
-		        		}
-		    		}
-		    		if (key == 8) {
+			        		if(valLenghtInput == 6 || valLenghtInput == 10 || valLenghtInput == 14){
+			        			setCaretToPos(document.getElementById("call"), valLenghtInput + 1);
+			        		}else if(valLenghtInput > 14){
+			        			return false
+			        		}
+			    		}
+			    		if (key == 37) {
+			        		if(valLenghtInput == 8 || valLenghtInput == 12){
+			        			setCaretToPos(document.getElementById("call"), valLenghtInput - 1);
+			        		}else if(valLenghtInput < 6){
+			        			return false
+			        		}
+			    		}
+			    		if (key == 8) {
 
-		        		if(valLenghtInput == 8 || valLenghtInput == 12){
+			        		if(valLenghtInput == 8 || valLenghtInput == 12){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput;
-			    			valKeyStart = valKey.slice(0, valLenghtInput - 2);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput;
+				    			valKeyStart = valKey.slice(0, valLenghtInput - 2);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
-			    			$(this).val(valKeyStart + ' -' + valKeyEnd);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			$(this).val(valKeyStart + ' -' + valKeyEnd);
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput - 2);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput - 2);
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput > 5){
+			        		}else if(valLenghtInput > 5){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput;
-			    			valKeyStart = valKey.slice(0, valLenghtInput - 1);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput;
+				    			valKeyStart = valKey.slice(0, valLenghtInput - 1);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
-			    			$(this).val(valKeyStart + ' ' + valKeyEnd);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			$(this).val(valKeyStart + ' ' + valKeyEnd);
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput - 1);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput - 1);
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else{
+			        		}else{
 
-		        			return false
+			        			return false
 
-		        		}
+			        		}
 
-		    		}
+			    		}
 
-		    		if (key == 46) {
+			    		if (key == 46) {
 
-	
-		        		if(valLenghtInput == 5){
+		
+			        		if(valLenghtInput == 5){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel1 = valKeyEndDel.slice(5, 7);
-			    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel1 = valKeyEndDel.slice(5, 7);
+				    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel1 + '-' + valKeyEndDel2 + '-' + valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel1 + '-' + valKeyEndDel2 + '-' + valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 6){
+			        		}else if(valLenghtInput == 6){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel1 = valKeyEndDel.slice(6, 7);
-			    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel1 = valKeyEndDel.slice(6, 7);
+				    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel1 + '-' + valKeyEndDel2 + '-' + valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel1 + '-' + valKeyEndDel2 + '-' + valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 8){
+			        		}else if(valLenghtInput == 8){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel2 = valKeyEndDel.slice(7, 10);
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 9){
+			        		}else if(valLenghtInput == 9){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel2 = valKeyEndDel.slice(8, 10);
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel2 = valKeyEndDel.slice(8, 10);
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 10){
+			        		}else if(valLenghtInput == 10){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel2 = valKeyEndDel.slice(9, 10);
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel2 = valKeyEndDel.slice(9, 10);
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel2 + '-' + valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 12){
+			        		}else if(valLenghtInput == 12){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel3 = valKeyEndDel.slice(10, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 13){
+			        		}else if(valLenghtInput == 13){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel3 = valKeyEndDel.slice(11, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel3 = valKeyEndDel.slice(11, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else if(valLenghtInput == 14){
+			        		}else if(valLenghtInput == 14){
 
-		        			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
+			        			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput + 0);
 
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
 
-			    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
-			    			var valKeyEndDel3 = valKeyEndDel.slice(12, 13);
+				    			var valKeyEndDel = $('#call').val().replace(/-/g,"");
+				    			var valKeyEndDel3 = valKeyEndDel.slice(12, 13);
 
-			    			valKeyEndDelWin = valKeyEndDel3;
+				    			valKeyEndDelWin = valKeyEndDel3;
 
-			    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
+				    			$(this).val(valKeyStart + valKeyEndDelWin + ' ');
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 0);
 
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
+				    			return false
 
-		        		}else{
-		        			return false
-		        		}
+			        		}else{
+			        			return false
+			        		}
 
-		        
+			        
 
-		    		}
+			    		}
 
-		    		if( (key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
-		    			if(valLenghtInput == 6 || valLenghtInput == 10){
+			    		if( (key >= 48 && key <= 57) || (key >= 96 && key <= 105)){
+			    			if(valLenghtInput == 6 || valLenghtInput == 10){
 
-		    				if(key == 48 || key == 96){
-		    					keyNumber = 0;
-		    				}
-		    				if(key == 49 || key == 97){
-		    					keyNumber = 1;
-		    				}
-		    				if (key == 50 || key == 98){
-		    					keyNumber = 2;
-		    				}
-		    				if (key == 51 || key == 99){
-		    					keyNumber = 3;
-		    				}
-		    				if (key == 52 || key == 100){
-		    					keyNumber = 4;
-		    				}
-		    				if (key == 53 || key == 101){
-		    					keyNumber = 5;
-		    				}
-		    				if (key == 54 || key == 102){
-		    					keyNumber = 6;
-		    				}
-		    				if (key == 55 || key == 103){
-		    					keyNumber = 7;
-		    				}
-		    				if (key == 56 || key == 104){
-		    					keyNumber = 8;
-		    				}
-		    				if (key == 57 || key == 105){
-		    					keyNumber = 9;
-		    				}
-		    				
-			    			var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput);
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
-			    			$(this).val(valKeyStart + keyNumber + valKeyEnd);
+			    				if(key == 48 || key == 96){
+			    					keyNumber = 0;
+			    				}
+			    				if(key == 49 || key == 97){
+			    					keyNumber = 1;
+			    				}
+			    				if (key == 50 || key == 98){
+			    					keyNumber = 2;
+			    				}
+			    				if (key == 51 || key == 99){
+			    					keyNumber = 3;
+			    				}
+			    				if (key == 52 || key == 100){
+			    					keyNumber = 4;
+			    				}
+			    				if (key == 53 || key == 101){
+			    					keyNumber = 5;
+			    				}
+			    				if (key == 54 || key == 102){
+			    					keyNumber = 6;
+			    				}
+			    				if (key == 55 || key == 103){
+			    					keyNumber = 7;
+			    				}
+			    				if (key == 56 || key == 104){
+			    					keyNumber = 8;
+			    				}
+			    				if (key == 57 || key == 105){
+			    					keyNumber = 9;
+			    				}
+			    				
+				    			var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			$(this).val(valKeyStart + keyNumber + valKeyEnd);
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput + 2);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput + 2);
 
-			    			keyVal = false;
+				    			keyVal = false;
 
-			    			return false
-		    			}else if(valLenghtInput < 15){
-		    				var valKey = $(this).val();
-			    			cleanForm();
-			    			valKey2 = valKey.length;
-			    			valLenghtOld = valLenghtInput + 1;
-			    			valKeyStart = valKey.slice(0, valLenghtInput);
-			    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
-			    			$(this).val(valKeyStart + valKeyEnd);
+				    			return false
+			    			}else if(valLenghtInput < 15){
+			    				var valKey = $(this).val();
+				    			cleanForm();
+				    			valKey2 = valKey.length;
+				    			valLenghtOld = valLenghtInput + 1;
+				    			valKeyStart = valKey.slice(0, valLenghtInput);
+				    			valKeyEnd = valKey.slice(valLenghtOld, valKey2);
+				    			$(this).val(valKeyStart + valKeyEnd);
 
-			    			setCaretToPos(document.getElementById("call"), valLenghtInput);
+				    			setCaretToPos(document.getElementById("call"), valLenghtInput);
 
-			    			keyVal = false;
-		    			}else {
-		    				return false
-		    			}
+				    			keyVal = false;
+			    			}else {
+			    				return false
+			    			}
 
-	    					
-		    		}else {
-		    			 return (
-			                key == 8 || 
-			                key == 9 ||
-			                key == 46 ||
-			                (key >= 37 && key <= 40));
-		    		}
+		    					
+			    		}else {
+			    			 return (
+				                key == 8 || 
+				                key == 9 ||
+				                key == 46 ||
+				                (key >= 37 && key <= 40));
+			    		}
 
-		    	keyVal = false;
+			    	keyVal = false;
+
+		    	}else {
+		    		return false
+		    	}
+
+
+
 
 	    	}else {
 	    		return false
 	    	}
-
-
-
-
-
 
 		});
 
